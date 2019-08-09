@@ -1,7 +1,7 @@
 /* Create and use the starwars db */
-DROP DATABASE IF EXISTS wordgoal_db;
-CREATE DATABASE wordgoal_db;
-USE wordgoal_db;
+DROP DATABASE IF EXISTS disneyforall_db;
+CREATE DATABASE disneyforall_db;
+USE disneyforall_db;
 
 
 /* Create a table for all teachers */
