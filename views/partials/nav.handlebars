@@ -6,7 +6,7 @@
                 Menu <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" href="/">
-                <span class="light"><img class="shield-icon" src="/assets/img/mickey.jpg">  Disney For All</span>
+                <span class="light"><img class="shield-icon" src="/assets/img/mickey.jpg"> Disney For All</span>
             </a>
         </div>
 
@@ -17,31 +17,40 @@
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
-                
+
                 {{!-- <li>
                     <a class="page-scroll" href="/data/">Access Data</a>
                 </li> --}}
                 {{#if isAuthenticated}}
-                 <li>
-                    <a href="/data" class ="page-scroll"> Dashboard</a>
-                    </li>
-                     <li>
-                    <a href="/showData" class ="page-scroll"> Homeroom Data</a>
-                    </li>
+                <li>
+                    <a href="/data" class="page-scroll"> Dashboard</a>
+                </li>
+                <li>
+                    <a href="/showData" class="page-scroll"> Homeroom Data</a>
+                </li>
 
-                    <li>
-                    <a href="/rankings" class ="page-scroll"> Class Ranking</a>
-                    </li>
-                    <li>
-                    <a href="/inputData" class ="page-scroll"> Update Student  Data</a>
-                    </li>
-                    <li>
-                        <a href="/users/sign-out" class="page-scroll" data-toggle="modal">Logout</a>
-                    </li>
+                <li>
+                    <a href="/rankings" class="page-scroll"> Class Ranking</a>
+                </li>
+                <li>
+                    <a href="/inputData" class="page-scroll"> Update Student Data</a>
+                </li>
+                <li>
+                    <a href="/users/sign-out" class="page-scroll" data-toggle="modal">Logout</a>
+                </li>
                 {{else}}
-                    <li>
-                        <a class="page-scroll" data-toggle="modal" data-target="#login-modal">Login</a>
-                    </li>
+                <li>
+                    <a class="page-scroll" data-toggle="modal" data-target="#login-modal">About Us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" data-toggle="modal" data-target="#login-modal">Meet the Families</a>
+                </li>
+                <li>
+                    <a class="page-scroll" data-toggle="modal" data-target="#login-modal">Donate</a>
+                </li>
+                <li>
+                    <a class="page-scroll" data-toggle="modal" data-target="#login-modal">Login/Register</a>
+                </li>
                 {{/if}}
             </ul>
         </div>
