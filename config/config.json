@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "GoingCrazy!23",
+    "password": "brasilia1",
     "database": "disneyforall_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "kash2003",
+    "password": "brasilia1",
     "database": "disneyforall_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
