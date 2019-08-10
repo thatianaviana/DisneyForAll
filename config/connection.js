@@ -4,8 +4,6 @@ var mysql = require("mysql");
 // Set up our connection information - setting up this info once we got live on heroku so we can get the databa info for that
 
 
-
-
 var connection = mysql.createConnection({
   host: "j1r4n2ztuwm0bhh5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   port: 3306,
