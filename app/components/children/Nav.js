@@ -48,8 +48,10 @@ export default class Nav extends Component {
                 <a href="#page-top"></a>
               </li>
 
+
+
               <li>
-                <NavLink to="/donate">DONATE</NavLink>
+                <a className="page-scroll nav-right-text" href="/donate"><p>DONATE</p></a>
               </li>
               {/* <li>
                       <a className="page-scroll nav-right-text" href="/trips">
