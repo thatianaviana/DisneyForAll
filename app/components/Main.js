@@ -1,6 +1,7 @@
 // Include React
 import React, { Component } from 'react';
 import Nav from './children/Nav';
+import Footer from './Footer';
 
 require('./main.css');
 
@@ -27,7 +28,7 @@ export default class Main extends Component {
                     <div className="intro-body">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-8 col-md-offset-2">
+                                <div className="col-md-12">
                                     <h1 className="brand-heading">Disney For All</h1>
                                     <h3 className="intro-text">Because Every Child Deserves A Day In The Happiest Place On Earth</h3>
                                     <ul className="positives_list">
@@ -87,11 +88,7 @@ export default class Main extends Component {
                     </div>
                 </section>
 
-                <footer>
-                    <div className="container text-center">
-                        <p>Copyright &copy; Your Website 2016</p>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         );
     }

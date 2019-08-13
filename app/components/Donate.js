@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './children/Nav'
-
 require('./Donate.css');
+import Footer from './Footer'
 
 export default class Donate extends Component {
     render() {
@@ -24,6 +24,7 @@ export default class Donate extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         );
     }
