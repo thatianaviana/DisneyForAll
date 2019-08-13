@@ -1,22 +1,6 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+var PAYPAL = new PAYPAL(keys.PAYPAL);
 
-// jQuery to collapse the navbar on scroll
-// function collapseNavbar() {
-//     if ($(".navbar").offset().top > 50) {
-//         $(".navbar-fixed-top").addClass("top-nav-collapse");
-//     } else {
-//         $(".navbar-fixed-top").removeClass("top-nav-collapse");
-//     }
-// }
 
-// $(window).scroll(collapseNavbar);
-// $(document).ready(collapseNavbar);
-
-// jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function () {
     $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
@@ -32,8 +16,7 @@ $('.navbar-collapse ul li a').click(function () {
     $(".navbar-collapse").collapse('hide');
 });
 
-PAYPAL_CLIENT = 'AbbjrpIxaESIwEm4B-SJKfBc9Znf5KPpZUiYrm-wVqAFK-GfFguv8KgfPJrvOTSjqfMZVwefnWxWYMFd';
-PAYPAL_SECRET = 'EImPSyap3goDbCqKuB0kTS3AYPftmIC-Ae3ROHyqSTLKFAo_eoBf3SW3S9HVf9FJTE6OuKEQLJJZjiEg';
+
 
 // 1b. Point your server to the PayPal API
 PAYPAL_OAUTH_API = 'https://api.sandbox.paypal.com/v1/oauth2/token/';
