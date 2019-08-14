@@ -14,59 +14,48 @@ export default class MeetFamilies extends Component {
                     logout={this.props.logout}
                 />
                 <section id="meetfamilies">
-                    {/* <div className="container">
+                    <div className="container">
                         <div className="row">
-                            <div className="col-sm-4">
-                                <div className="panel panel-primary">
-                                    <div className="panel-heading">BLACK FRIDAY DEAL</div>
-                                    <div className="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive" style="width:100%" alt="Image" /></div>
-                                    <div className="panel-footer">Buy 50 mobiles and get a gift card</div>
-                                </div>
+                            <div className="card">
+                                <img src="https://via.placeholder.com/200" className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
                             </div>
-                            <div className="col-sm-4">
-                                <div className="panel panel-danger">
-                                    <div className="panel-heading">BLACK FRIDAY DEAL</div>
-                                    <div className="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive" style="width:100%" alt="Image" /></div>
-                                    <div className="panel-footer">Buy 50 mobiles and get a gift card</div>
-                                </div>
+                            <div className="card">
+                                <img src="https://via.placeholder.com/200" className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
                             </div>
-                            <div className="col-sm-4">
-                                <div className="panel panel-success">
-                                    <div className="panel-heading">BLACK FRIDAY DEAL</div>
-                                    <div className="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive" style="width:100%" alt="Image" /></div>
-                                    <div className="panel-footer">Buy 50 mobiles and get a gift card</div>
-                                </div>
+                            <div className="card">
+                                <img src="https://via.placeholder.com/200" className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                            </div>
+                            <div className="card">
+                                <img src="https://via.placeholder.com/200" className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                            </div>
+                            <div className="card">
+                                <img src="https://via.placeholder.com/200" className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                            </div>
+                            <div className="card">
+                                <img src="https://via.placeholder.com/200" className="card-img-top" alt="..."/>
+                                    <div className="card-body">
+                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
                             </div>
                         </div>
                     </div>
-
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-sm-4">
-                                    <div className="panel panel-primary">
-                                        <div className="panel-heading">BLACK FRIDAY DEAL</div>
-                                        <div className="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive" style="width:100%" alt="Image" /></div>
-                                        <div className="panel-footer">Buy 50 mobiles and get a gift card</div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-4">
-                                    <div className="panel panel-primary">
-                                        <div className="panel-heading">BLACK FRIDAY DEAL</div>
-                                        <div className="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive" style="width:100%" alt="Image" /></div>
-                                        <div className="panel-footer">Buy 50 mobiles and get a gift card</div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-4">
-                                    <div className="panel panel-primary">
-                                        <div className="panel-heading">BLACK FRIDAY DEAL</div>
-                                        <div className="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive" style="width:100%" alt="Image" /></div>
-                                        <div className="panel-footer">Buy 50 mobiles and get a gift card</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
                 </section>
             </div>
-        );
-    }
+                );
+            }
 }
