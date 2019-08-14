@@ -20,43 +20,45 @@ export default class Apply extends Component {
                         <div className="col-md-12 text-center">
                             <div className="panel panel-danger panel-pricing">
                                 <div className="panel-heading">
-                                    <h3>Apply</h3>
-                                </div>
-                                <div className="panel-body text-center">
-                                    <p><strong>Please Fill Out All Information</strong></p>
+                                <h3>To Apply Please Fill Out All The Information Below</h3>
                                 </div>
 
-                                <div className="form-group col-lg-6"  ref="firstName">
-									<a>First Name</a>
-									<input type="" name="" ref="firstName" className="form-control" id="firstName-input" />
-									<small id="firstName-feedback" ref="firstNameFeedback" className=""></small>
-								</div>
-                                <div className="form-group col-lg-6"  ref="lastName">
-									<a>Last Name</a>
-									<input type="" name="" ref="lastName" className="form-control" id="lastName-input" />
-									<small id="lastName-feedback" ref="lastNameFeedback" className=""></small>
-								</div>
+                                <form>
+                                <div className="form-group col-md-6 text-left">
+                                    <p>Full Name</p>
+                                    <input type="name" className="form-control" id="fullName" />
+                                </div>
+                                <div className="form-group col-md-6 text-left">
+                                    <p>Annual Household Income</p>
+                                    <input type="name" className="form-control" id="income" />
+                                </div>
 
-                                <div className="form-group col-lg-6"  ref="aboutFamily">
-									<a>Tell Us About Your Family</a>
-                                    <textarea lassName="form-group col-lg-6"></textarea>
-								</div>
-								
-                               
-                                <div className="add-file">
-                                    <div className="row">
-                                        <div className="col-md-12 text-center">
-                                            <a>Upload your bank statements</a>
+                                {/* <div class="input-group mb-3 text-left"/>
+                                    <div class="input-group-prepend">
+                                        <p>Annual Income</p>
+                                        <span class="input-group-text">$</span>
+                                </div>
+ */}
+
+                                <div className="form-group col-md-10 text-left">
+                                    <p>About My Family</p>
+                                    <textarea className="form-control" id="aboutFamily" rows="3"></textarea>
+                                </div>
+
+                                <div className="add-file col-md-6 text-left">
+                                            <p>Share a picture of your family</p>
                                             <input type="file" />
-                                        </div>
-                                    </div>
                                 </div>
 
+                                </form>
+                               
+                              
+
+                            <br></br>
                                 <div className="panel-footer">
                                     <a className="btn btn-lg btn-block btn-success" href="#">Submit!</a>
                                 </div>
-
-                             
+                    
                             </div>
                         </div>
                     </div>
