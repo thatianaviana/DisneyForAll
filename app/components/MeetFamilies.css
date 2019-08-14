@@ -32,4 +32,8 @@
     padding: 20px;
     margin: 0px;
   }
-  
+  .card {
+    width: 15rem;
+    /* padding: 10px; */
+    margin: 5px;
+  }
