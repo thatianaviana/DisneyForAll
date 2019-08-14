@@ -15,6 +15,27 @@ require('./main.css');
 
 // Creating the Main component
 export default class Main extends Component {
+<<<<<<< HEAD
+  render() {
+    return (
+      <div>
+        <Nav
+          authenticated={this.props.authenticated}
+          authenticate={this.props.authenticate}
+          deAuthenticate={this.props.deAuthenticate}
+          logout={this.props.logout}
+        />   
+        <header className="intro">
+            <div className="intro-body">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8 col-md-offset-2">
+                            <h1 className="brand-heading">Disney For All</h1>
+                            <h3 className="intro-text">Because Every Child Deserves A Day In The Happiest Place On Earth</h3>
+
+                            <a href="#about" className="btn btn-circle page-scroll">
+                                {/* <i className="fa down-arrow animated">
+=======
     render() {
         return (
             <div>
@@ -39,6 +60,7 @@ export default class Main extends Component {
                                     </ul>
                                     <a href="#about" className="btn btn-circle page-scroll">
                                         {/* <i className="fa down-arrow animated">
+>>>>>>> master
                                    <img className="down-arrow" src={require("../img/shapes/HomeDown.png")} alt="Down Arrow" />
                                 </i> */}
                                     </a>
@@ -48,6 +70,26 @@ export default class Main extends Component {
                     </div>
                 </header>
 
+<<<<<<< HEAD
+        {/* <section id="user-comments" className="content-section text-center">
+            <div className="user-feedback-section">
+                <div className="container">
+                    <div className="col-lg-8 col-lg-offset-2">
+                        <h2>TravelSafe User Comments</h2>
+                        <p>Without your journeys, we would be lost</p>
+                        <p>Thank you for letting us help you be safe in your travels.</p>
+                        <div className="container content">
+                            <div className="row">
+                                <div className="col-md-6 col-md-offset-3">
+                                    <div className="testimonials">
+                                        <div className="active item">
+                                          <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+                                          <div className="carousel-info">
+                                            <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" className="pull-left" />
+                                            <div className="pull-left">
+                                              <span className="testimonials-name">Lina Mars</span>
+                                              <span className="testimonials-post">Commercial Director</span>
+=======
                 <section id="about" className="container content-section text-center">
                     <div className="row">
                         <div className="col-lg-8 col-lg-offset-2">
@@ -79,6 +121,7 @@ export default class Main extends Component {
                                                         </div>
                                                     </div>
                                                 </div>
+>>>>>>> master
                                             </div>
                                         </div>
                                     </div>
@@ -86,9 +129,19 @@ export default class Main extends Component {
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
+                </div>
+            </div>
+        </section> */}
+
+        <footer>
+            <div className="container text-center">
+                <p>Copyright &copy; Disney for All is a registered 501(c)3 non-profit organization. 100% of your donation is tax-deductible.</p>
+=======
                 </section>
 
                 <Footer />
+>>>>>>> master
             </div>
         );
     }
