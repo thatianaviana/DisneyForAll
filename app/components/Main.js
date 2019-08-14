@@ -28,15 +28,10 @@ export default class Main extends Component {
                     <div className="intro-body">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-12">
+                                <div className="col-md-8 col-md-offset-2">
                                     <h1 className="brand-heading">Disney For All</h1>
                                     <h3 className="intro-text">Because Every Child Deserves A Day In The Happiest Place On Earth</h3>
-                                    <ul className="positives_list">
-                                        <p>Sign up for free and you get:</p>
-                                        <p>Streaming updates on security status using a variety of different factors.</p>
-                                        <p>Locations of active safe zones and hospitals, police etc.</p>
-                                        <p>Highly customized for each, specific region, using security data for the locations you'll be traveling to.</p>
-                                    </ul>
+
                                     <a href="#about" className="btn btn-circle page-scroll">
                                         {/* <i className="fa down-arrow animated">
                                    <img className="down-arrow" src={require("../img/shapes/HomeDown.png")} alt="Down Arrow" />

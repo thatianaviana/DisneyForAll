@@ -11,8 +11,12 @@ import AboutUs from "./AboutUs";
 import Donate from "./Donate";
 import MeetFamilies from "./MeetFamilies";
 import axios from 'axios';
+<<<<<<< HEAD
+import MeetFamilies from './MeetFamilies';
+=======
 import Nav from './children/Nav'
 import Footer from './Footer'
+>>>>>>> master
 
 export default class MainRouter extends Component {
   constructor(props) {

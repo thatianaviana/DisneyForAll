@@ -8,7 +8,8 @@ body {
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  background-color: 
+  /* background-color:  */
+ 
 }
 html {
   width: 100%;
@@ -236,7 +237,17 @@ p {
 /* End Testimonials */
 
 /* Thatiana Code KEEP */
-/* 
-.container {
-  margin-top: 50px;
-} */
+
+section {
+  margin-top: 100px;
+}
+
+nav {
+  background-color: #c59fc9;
+
+}
+
+header {
+  margin-top: 40px;
+  height: 100%;
+}
