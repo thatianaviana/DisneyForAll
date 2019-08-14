@@ -1,13 +1,12 @@
-.navbar-brand {
-  padding: 0;
-  padding-top: 10px;
-  width: 200px;
+.navbar{
+ padding:1rem;
 }
 
-.navbar-header {
-  text-align: center;
+#navbarNav{
+  justify-content: flex-end!important
 }
 
+<<<<<<< HEAD
 .nav-container {
   text-align: center;
 }
@@ -167,3 +166,10 @@ nav {
   background-color: #c59fc9;
   
 }
+=======
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2rem;
+    padding-left: .5rem;
+}}
+>>>>>>> master

@@ -16,6 +16,7 @@ export default class AboutUs extends Component {
                 <section id="plans">
                     <div className="container">
                         <div className="row">
+<<<<<<< HEAD
                             <div className="col-md-12 mx-auto">
                                 <div className= "card card-lg" className="aboutus">
                                         <h1 className="text-xxxl mb-sm mt-sm text-center">Our Mission</h1>
@@ -33,6 +34,24 @@ export default class AboutUs extends Component {
                                         Adipiscing elit duis tristique sollicitudin nibh sit. Mauris sit amet massa vitae. 
                                         Eget egestas purus viverra accumsan in nisl. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. 
                                         Blandit libero volutpat sed cras ornare arcu.</p>
+=======
+                            <div className="col-md-12 text-center">
+                                <div className="panel panel-danger panel-pricing">
+                                    <div className="panel-heading">
+                                        <h3>About Us</h3>
+                                    </div>
+                                    <div className="panel-body text-center">
+                                        <p><strong>$100 / Month</strong></p>
+                                    </div>
+                                    <ul className="list-group text-center">
+                                        <li className="list-group-item"><i className="fa fa-check"></i> Personal use</li>
+                                        <li className="list-group-item"><i className="fa fa-check"></i> Unlimited projects</li>
+                                        <li className="list-group-item"><i className="fa fa-check"></i> 27/7 support</li>
+                                    </ul>
+                                    <div className="panel-footer">
+                                        <a className="btn btn-lg btn-block btn-danger" href="#">BUY NOW!</a>
+                                    </div>
+>>>>>>> master
                                 </div>
                                     
 
@@ -40,7 +59,11 @@ export default class AboutUs extends Component {
                         </div>
                     </div>
                 </section>
+<<<<<<< HEAD
                 
+=======
+                <Footer />
+>>>>>>> master
             </div>
         );
     }
