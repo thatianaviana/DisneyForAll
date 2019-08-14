@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from './children/Nav'
-import Footer from './Footer'
+
 require('./AboutUs.css');
 
 export default class AboutUs extends Component {
@@ -40,8 +40,8 @@ export default class AboutUs extends Component {
                         </div>
                     </div>
                 </section>
-                <Footer />
-            </div >
+                
+            </div>
         );
     }
 }
