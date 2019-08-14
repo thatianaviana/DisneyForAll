@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
-// import Nav from './children/Nav'
+import Nav from './children/Nav'
 
 require('./Signup.css');
 
@@ -217,12 +217,12 @@ export default class Signup extends Component {
 
 		return (
 			<div>
-				{/* <Nav
-          authenticated={this.props.authenticated}
-          authenticate={this.props.authenticate}
-          deAuthenticate={this.props.deAuthenticate}
-          logout={this.props.logout}
-        />   */}
+				<Nav
+					authenticated={this.props.authenticated}
+					authenticate={this.props.authenticate}
+					deAuthenticate={this.props.deAuthenticate}
+					logout={this.props.logout}
+				/>
 				<div id="registration-container" className="container-fluid">
 					<section className="container">
 						<div className="container-page">

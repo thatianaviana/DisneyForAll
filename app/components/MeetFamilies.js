@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Nav from './children/Nav'
+import Nav from './children/Nav'
 
 require('./MeetFamilies.css');
 
@@ -7,12 +7,12 @@ export default class MeetFamilies extends Component {
     render() {
         return (
             <div>
-                {/* <Nav
-            authenticated={this.props.authenticated}
-            authenticate={this.props.authenticate}
-            deAuthenticate={this.props.deAuthenticate}
-            logout={this.props.logout}
-            />   */}
+                <Nav
+                    authenticated={this.props.authenticated}
+                    authenticate={this.props.authenticate}
+                    deAuthenticate={this.props.deAuthenticate}
+                    logout={this.props.logout}
+                />
                 <section id="plans">
                     <div className="container">
                         <div className="row">

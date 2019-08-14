@@ -7,7 +7,12 @@ export default class Donate extends Component {
     render() {
         return (
             <div>
-
+                <Nav
+                    authenticated={this.props.authenticated}
+                    authenticate={this.props.authenticate}
+                    deAuthenticate={this.props.deAuthenticate}
+                    logout={this.props.logout}
+                />
                 <div className="donation">
                     <div className="row">
                         <div className="col-md-12 text-center">

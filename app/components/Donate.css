@@ -13,7 +13,7 @@
   background: url(../img/happy.jpg);
   background-size: cover;
   background-attachment: fixed;
-  margin-top: 50px;
+  margin-top:50px;
 }
 
 .donation h1, .donation h3, #paypal-button-container{

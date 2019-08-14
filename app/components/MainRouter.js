@@ -11,6 +11,8 @@ import AboutUs from "./AboutUs";
 import Donate from "./Donate";
 import MeetFamilies from "./MeetFamilies";
 import axios from 'axios';
+import Nav from './children/Nav'
+import Footer from './Footer'
 
 export default class MainRouter extends Component {
   constructor(props) {
@@ -108,6 +110,7 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />}
           />
+          <Footer />
         </Switch>
       </Router>
     );
