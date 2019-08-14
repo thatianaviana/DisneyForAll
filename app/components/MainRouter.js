@@ -95,11 +95,7 @@ export default class MainRouter extends Component {
             />}
           />
           {/* Thatiana added this code for the meet families page */}
-<<<<<<< HEAD
-          <Route exact path="/meetfamilies" render={props => 
-=======
           <Route exact path="/meetfamilies" render={props =>
->>>>>>> master
             <MeetFamilies
               {...props}
               authenticate={this.authenticate}
