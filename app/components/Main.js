@@ -43,8 +43,11 @@ export default class Main extends Component {
                     </div>
                 </header>
 
+<<<<<<< HEAD
+=======
 
                 
+>>>>>>> master
 
                 <Footer />
             </div>
