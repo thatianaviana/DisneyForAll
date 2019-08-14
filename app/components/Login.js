@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Nav from './children/Nav'
+import Footer from './Footer';
 
 require('./login.css');
 
@@ -102,6 +103,7 @@ export default class Login extends Component {
             <Link to={"/signup"}> Register </Link>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

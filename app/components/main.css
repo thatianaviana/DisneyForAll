@@ -3,6 +3,9 @@
   height: 45px;
 	max-width: 100%;
 }
+header {
+  height: 100%;
+}
 
 .intro {
   display: table;
@@ -17,7 +20,7 @@
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
 .intro .intro-body {

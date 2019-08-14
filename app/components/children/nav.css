@@ -1,13 +1,12 @@
-.navbar-brand {
-  padding: 0;
-  padding-top: 10px;
-  width: 200px;
+.navbar{
+ padding:1rem;
 }
 
-.navbar-header {
-  text-align: center;
+#navbarNav{
+  justify-content: flex-end!important
 }
 
+<<<<<<< HEAD
 .nav-container {
   text-align: center;
 }
@@ -16,7 +15,7 @@
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background-color:  #c59fc9;
 }
 
 .navbar-custom .navbar-toggle {
@@ -29,9 +28,9 @@
   margin-top: 21px;
 }
 
-.navbar-custom .navbar-toggle-right {
+/* .navbar-custom .navbar-toggle-right {
   float: right;
-}
+} */
 
 .fa-bars {
   font-size: 2.3em;
@@ -48,12 +47,12 @@
 }
 
 .navbar-custom a {
-  color: rgb(57, 172, 233);
+  color: grey;
 }
 .navbar-custom .nav li {
   border-top: solid 1px;
   border-bottom: solid 1px;
-  border-color: rgb(57, 172, 233);
+  border-color: grey;
 
 }
 .navbar-custom .nav li a {
@@ -64,7 +63,7 @@
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
   outline: none;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 .navbar-custom .nav li.active {
   outline: none;
@@ -103,7 +102,7 @@
   .navbar-custom .nav li a:hover {
     color: rgba(0, 0, 0, 0.8);
     outline: none;
-    background-color: transparent;
+    background-color:  #c59fc9;
   }
 
   .nav-right-text p {
@@ -125,7 +124,7 @@
   .navbar-custom .nav li a:hover {
     color: white;
     outline: none;
-    background-color: transparent;
+  
   }
 
   .nav-right-text p, .nav-left-text p {
@@ -139,7 +138,7 @@
     padding: 20px 0;
     border-bottom: none;
     letter-spacing: 1px;
-    background: transparent;
+
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
@@ -161,3 +160,16 @@
     font-size: 10px;
   }
 }
+
+
+nav {
+  background-color: #c59fc9;
+  
+}
+=======
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2rem;
+    padding-left: .5rem;
+}}
+>>>>>>> master

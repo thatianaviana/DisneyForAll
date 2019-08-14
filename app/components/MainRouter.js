@@ -10,6 +10,7 @@ import Signup from "./Signup";
 import AboutUs from "./AboutUs";
 import Apply from "./Apply";
 import Donate from "./Donate";
+import MeetFamilies from "./MeetFamilies";
 import axios from 'axios';
 
 export default class MainRouter extends Component {
@@ -50,17 +51,17 @@ export default class MainRouter extends Component {
   render() {
     return (
       <Router>
-      	<Switch>
-          <Route exact path="/" render={props => 
+        <Switch>
+          <Route exact path="/" render={props =>
             <Main
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}
               authenticated={this.state.authenticated}
               logout={this.logout}
-            />} 
+            />}
           />
-          <Route exact path="/login" render={props => 
+          <Route exact path="/login" render={props =>
             <Login
               {...props}
               authenticate={this.authenticate}
@@ -69,44 +70,44 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />}
           />
-          <Route exact path="/signup" render={props => 
+          <Route exact path="/signup" render={props =>
             <Signup
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}
               authenticated={this.state.authenticated}
               logout={this.logout}
-            />} 
+            />}
           />
-           {/* Thatiana added this code for the donate page */}
-          <Route exact path="/donate" render={props => 
+          {/* Thatiana added this code for the donate page */}
+          <Route exact path="/donate" render={props =>
             <Donate
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}
               authenticated={this.state.authenticated}
               logout={this.logout}
-            />} 
+            />}
           />
           {/* Thatiana added this code for the meet families page */}
-          <Route exact path="/meetfamilies" render={props => 
-            <Donate
+          <Route exact path="/meetfamilies" render={props =>
+            <MeetFamilies
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}
               authenticated={this.state.authenticated}
               logout={this.logout}
-            />} 
+            />}
           />
           {/* Thatiana added this code for the about page */}
-          <Route path="/aboutus" render={props => 
+          <Route path="/aboutus" render={props =>
             <AboutUs
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}
               authenticated={this.state.authenticated}
               logout={this.logout}
-            />} 
+            />}
           />
           {/* Paula added this code for the apply page */}
           <Route exact path="/apply" render={props => 
