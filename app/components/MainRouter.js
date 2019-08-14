@@ -10,6 +10,7 @@ import Signup from "./Signup";
 import AboutUs from "./AboutUs";
 import Donate from "./Donate";
 import axios from 'axios';
+import MeetFamilies from './MeetFamilies';
 
 export default class MainRouter extends Component {
   constructor(props) {
@@ -89,7 +90,7 @@ export default class MainRouter extends Component {
           />
           {/* Thatiana added this code for the meet families page */}
           <Route exact path="/meetfamilies" render={props => 
-            <Donate
+            <MeetFamilies
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}

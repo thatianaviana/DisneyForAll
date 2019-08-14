@@ -19,7 +19,7 @@ export default class Donate extends Component {
                         <div className="col-md-12 text-center">
                             <div className="panel panel-danger panel-pricing">
                                 <div className="panel-heading">
-                                    <h3>Donate</h3>
+                                    <h3>Donate YO</h3>
                                 </div>
                                 <div className="panel-body text-center">
                                     <p><strong>$100 / Month</strong></p>

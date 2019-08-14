@@ -33,3 +33,14 @@
     margin: 0px;
   }
   
+  p {
+    color: black;
+
+  }
+
+  .aboutus {
+    border: solid 3px gray;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 40px
+  }

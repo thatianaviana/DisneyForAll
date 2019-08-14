@@ -3,6 +3,9 @@
   height: 45px;
 	max-width: 100%;
 }
+header {
+  height: 100%;
+}
 
 .intro {
   display: table;
