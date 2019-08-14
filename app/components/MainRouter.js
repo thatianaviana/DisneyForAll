@@ -8,6 +8,7 @@ import Main from "./Main";
 import Login from "./Login";
 import Signup from "./Signup";
 import AboutUs from "./AboutUs";
+import Apply from "./Apply";
 import Donate from "./Donate";
 import axios from 'axios';
 
@@ -107,6 +108,16 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />} 
           />
+          {/* Paula added this code for the apply page */}
+          <Route exact path="/apply" render={props => 
+            <Apply
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+            />
       	</Switch>
       </Router>
     );

@@ -30,6 +30,12 @@ export default class Nav extends Component {
                   <li>
                       <a className="page-scroll nav-left-text" href="/meetfamilies"><p>MEET THE FAMILIES</p></a>
                   </li>
+
+
+                  <li>
+                      <a className="page-scroll nav-left-text" href="/apply"><p>APPLY</p></a>
+                  </li>
+
                   {this.props.authenticated ? (
                     <li>
                       <a href="#" onClick={this.props.logout} ><div className="page-scroll nav-left-text" data-toggle="modal"><p>LOGOUT</p></div></a>
@@ -47,12 +53,12 @@ export default class Nav extends Component {
                       <a href="#page-top"></a>
                   </li>
                   
-                  <li>
+                  {/* <li>
                       <a className="page-scroll nav-right-text" href="/donate">
                         <img className="navigation-icons" src={require("../../img/shapes/Profile.png")} />
                         <p>DONATE</p>
                       </a>
-                  </li>
+                  </li> */}
                   {/* <li>
                       <a className="page-scroll nav-right-text" href="/trips">
                         <img className="navigation-icons" src={require("../../img/shapes/offline.png")} />
@@ -61,12 +67,17 @@ export default class Nav extends Component {
                   </li> */}
                   {this.props.authenticated ? (
                   <li>
-                      <a className="page-scroll nav-right-text" href="/users/sign-out" data-toggle="modal">
+                      <a className="page-scroll nav-right-text" href="/admin" data-toggle="modal">
                         <img className="navigation-icons" src={require("../../img/shapes/search.png")} />
                         <p>ADMIN</p>
                       </a>
                   </li>
-                  ) : ""}
+                  ) : <li>
+                      <a className="page-scroll nav-right-text" href="/donate">
+                        <img className="navigation-icons" src={require("../../img/shapes/Profile.png")} />
+                        <p>DONATE</p>
+                      </a>
+                  </li>}
                   {/* <li>
                       <a className="page-scroll nav-right-text" data-toggle="modal" data-target="#login-modal">
                         <img className="navigation-icons" src={require("../../img/shapes/itinerary.png")} />
