@@ -8,11 +8,10 @@ import Main from "./Main";
 import Login from "./Login";
 import Signup from "./Signup";
 import AboutUs from "./AboutUs";
+import Apply from "./Apply";
 import Donate from "./Donate";
 import MeetFamilies from "./MeetFamilies";
 import axios from 'axios';
-import Nav from './children/Nav'
-import Footer from './Footer'
 
 export default class MainRouter extends Component {
   constructor(props) {
@@ -110,8 +109,17 @@ export default class MainRouter extends Component {
               logout={this.logout}
             />}
           />
-          <Footer />
-        </Switch>
+          {/* Paula added this code for the apply page */}
+          <Route exact path="/apply" render={props => 
+            <Apply
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+            />
+      	</Switch>
       </Router>
     );
   }
