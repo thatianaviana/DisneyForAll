@@ -21,18 +21,28 @@ export default class Nav extends Component {
                 <li className="nav-item">
                   <NavLink to="/meetfamilies" className="nav-link">Meet the Families</NavLink>
                 </li>
+
+                {this.props.authenticated ? (                
                 <li className="nav-item">
-                  <a className="nav-link" href="/donate">Donate</a>
+                  <NavLink to="/apply" className="nav-link">Apply</NavLink>
+                </li>          
+                   ) : (
+                  <li className="nav-item">
+                    <a className="nav-link" href="/donate">Donate</a>
                 </li>
+                )}
+
                 {this.props.authenticated ? (
                   <li className="nav-item">
                     <NavLink to="#" onClick={this.props.logout} className="nav-link" ><div className="page-scroll nav-left-text" data-toggle="modal">Logout</div></NavLink>
                   </li>
                 ) : (
                     <li className="nav-item">
-                      <NavLink to={"/login"} className="nav-link"><div className="page-scroll nav-left-text" data-toggle="modal">Login</div></NavLink>
+                      <NavLink to={"/login"} className="nav-link"><div className="page-scroll nav-left-text" data-toggle="modal">Login/Register</div></NavLink>
                     </li>
                   )}
+
+
               </ul>
             </div>
           </div>
