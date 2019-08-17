@@ -8,21 +8,19 @@
 
 footer {
     font-family: "futura-pt",sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
     background: #424242;
-    padding: 40px 0;
-    color: #FFF;
-    position: relative;
-    overflow: hidden;
-    display:block;
+    padding:20px 20px 10px;
+    border-top: 8px solid#c59fc9;
 }
 
 footer p{
     font-size: 15px;
 }
 
+.fab{
+    margin:5px;
+    font-size:25px;
+}
 
 
 

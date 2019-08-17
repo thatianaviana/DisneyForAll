@@ -44,7 +44,7 @@ export default class Main extends Component {
                 </header>
 
 
-                
+
 
                 <Footer />
             </div>
