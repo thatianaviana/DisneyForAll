@@ -9,7 +9,7 @@ export default class Nav extends Component {
       <div className="fixed-top">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <NavLink to="/" className="navbar-brand">Disney For All</NavLink>
+            <NavLink to="/" className="navbar-brand"> {/* <img src={require('../../img/logo.png')} alt="logo" className="brand-logo" />  */}Disney For All</NavLink>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -22,17 +22,32 @@ export default class Nav extends Component {
                   <NavLink to="/meetfamilies" className="nav-link">Meet the Families</NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/donate">Donate</a>
+                  <NavLink to="/admin" className="nav-link">Admin</NavLink>
+                </li>   
+                <li className="nav-item">
+                  <NavLink to="/apply" className="nav-link">Apply</NavLink>
+                </li>          
+                {this.props.authenticated ? (                
+                <li className="nav-item">
+                  <NavLink to="/apply" className="nav-link">Apply</NavLink>
+                </li>          
+                   ) : (
+                  <li className="nav-item">
+                    <a className="nav-link" href="/donate">Donate</a>
                 </li>
+                )}
+
                 {this.props.authenticated ? (
                   <li className="nav-item">
                     <NavLink to="#" onClick={this.props.logout} className="nav-link" ><div className="page-scroll nav-left-text" data-toggle="modal">Logout</div></NavLink>
                   </li>
                 ) : (
                     <li className="nav-item">
-                      <NavLink to={"/login"} className="nav-link"><div className="page-scroll nav-left-text" data-toggle="modal">Login</div></NavLink>
+                      <NavLink to={"/login"} className="nav-link"><div className="page-scroll nav-left-text" data-toggle="modal">Login/Register</div></NavLink>
                     </li>
                   )}
+
+
               </ul>
             </div>
           </div>

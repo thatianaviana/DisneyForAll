@@ -17,7 +17,7 @@ export default class Footer extends Component {
         return (
             <div>
                 <footer className="sticky-bottom">
-                    <div className="container text-center">
+                    <div className="container text-center"> 
                         <p>Copyright &copy; Disney For All is a registered 501(c)3 non-profit organization. 100% of your donation is tax-deductible.</p>
                         <a href="https://twitter.com/?lang=en"> <i className="fab fa-twitter"></i></a>
                         <a href="https://www.facebook.com"><i className="fab fa-facebook"></i></a>
