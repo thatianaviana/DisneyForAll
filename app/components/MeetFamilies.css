@@ -37,3 +37,17 @@
     /* padding: 10px; */
     margin: 5px;
   }
+  .card-header {
+    color: black;
+  }
+
+  .meetfamilies {
+      /* background: url(../img/happy.jpg); */
+      background-image: url(../img/disneyland.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      margin-top:50px;
+  }
+  .families {
+    border: solid 3px black;
+  }
