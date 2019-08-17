@@ -1,20 +1,21 @@
 var PAYPAL = new PAYPAL(keys.PAYPAL);
 
 
-$(function () {
-    $('a.page-scroll').bind('click', function (event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
+// $(function () {
+//     $('a.page-scroll').bind('click', function (event) {
+//         var $anchor = $(this);
+//         $('html, body').stop().animate({
+//             scrollTop: $($anchor.attr('href')).offset().top
+//         }, 1500, 'easeInOutExpo');
+//         event.preventDefault();
+//     });
+// });
 
-// Closes the Responsive Menu on Menu Item Click
-$('#navbarNav ul li a').click(function () {
-    $("#navbarNav").collapse('hide');
-});
+// // Closes the Responsive Menu on Menu Item Click
+// $('#navbarNav ul li a').click(function () {
+//     $("#navbarNav").collapse('hide');
+// });
+
 
 
 

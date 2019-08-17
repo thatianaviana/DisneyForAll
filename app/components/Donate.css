@@ -10,17 +10,25 @@
 }
 
 .donation{
-  background: url(../img/happy.jpg);
+  background-image: url(../img/happy_girl.jpg);
+  background-position: right;
   background-size: cover;
+  position: relative;  
   background-attachment: fixed;
-  margin-top:50px;
+  margin-top:60px;
 }
 
-.donation h1, .donation h3, #paypal-button-container{
+.donation h1, #paypal-button-container{
   margin-top:50px;
   color:white;
 }
 
 #paypal-button-container h3{
   margin-top:10px;
+}
+
+@media screen and (max-width: 640px) {
+  .donation{
+    background-position: center;
+  }
 }

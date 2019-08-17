@@ -3,24 +3,20 @@
   height: 45px;
 	max-width: 100%;
 }
-header {
-  height: 100%;
-}
+
 
 .intro {
+  width:100%;
+  height: 700px;
   display: table;
-  width: 100%;
-  height: auto;
-  padding: 2% 0;
-  text-align: center;
+  text-align:center;
   color: white;
-  background: url(../img/front_image.jpg) no-repeat center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
+  background: url(../img/front_image.jpg);
+  background-position: center;
   background-size: cover;
-  -o-background-size: cover;
-  margin-top: 4em;
+  position: relative;  
+  background-attachment: fixed;
+  margin-top:60px;
 }
 
 .intro .intro-body {
@@ -35,7 +31,6 @@ header {
 }
 @media (min-width: 768px) {
   .intro {
-    height: 100%;
     padding: 0;
   }
   .intro .intro-body .brand-heading {
@@ -59,7 +54,7 @@ header {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/Search.jpeg) no-repeat center center scroll;
+  /* background: url(../img/Search.jpeg) no-repeat center center scroll; */
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
