@@ -6,14 +6,14 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
   /* background-color:  */
  
 }
 html {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background: white;
 }
 
@@ -22,15 +22,12 @@ ul {
 }
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   margin: 0 0 35px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #c59fc9;
+  color: #eec7ed;
   -webkit-text-stroke: 1px grey;
 }
 p {
@@ -46,7 +43,7 @@ p {
   }
 }
 a {
-  color: #42DCA3;
+  color:#c59fc9;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -55,7 +52,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   color: #1d9b6c;
-  cursor: default;
+  cursor: pointer;
 }
 .light {
   font-weight: 400;
@@ -129,12 +126,7 @@ ul.banner-social-buttons {
     margin-bottom: 0;
   }
 }
-footer {
-  padding: 50px 0;
-}
-footer p {
-  margin: 0;
-}
+
 
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
@@ -242,12 +234,3 @@ section {
   margin-top: 100px;
 }
 
-nav {
-  background-color: #c59fc9;
-
-}
-
-header {
-  margin-top: 40px;
-  height: 100%;
-}
