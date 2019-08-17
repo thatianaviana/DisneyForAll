@@ -18,8 +18,7 @@ export default class Footer extends Component {
             <div>
                 <footer>
                     <div className="container text-center">
-                        <p>Copyright &copy; Disney for all 2019</p>
-                        <p>Disney For All is a registered 501(c)3 non-profit organization. 100% of your donation is tax-deductible.</p>
+                        <p>Copyright &copy; Disney For All is a registered 501(c)3 non-profit organization. 100% of your donation is tax-deductible.</p>
                         <i className="fab fa-twitter fa-2x"></i>
                         <i className="fab fa-facebook fa-2x"></i>
                         <i className="fab fa-instagram fa-2x"></i>
