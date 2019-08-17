@@ -21,7 +21,12 @@ export default class Nav extends Component {
                 <li className="nav-item">
                   <NavLink to="/meetfamilies" className="nav-link">Meet the Families</NavLink>
                 </li>
-
+                <li className="nav-item">
+                  <NavLink to="/admin" className="nav-link">Admin</NavLink>
+                </li>   
+                <li className="nav-item">
+                  <NavLink to="/apply" className="nav-link">Apply</NavLink>
+                </li>          
                 {this.props.authenticated ? (                
                 <li className="nav-item">
                   <NavLink to="/apply" className="nav-link">Apply</NavLink>
