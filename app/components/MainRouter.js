@@ -9,6 +9,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import AboutUs from "./AboutUs";
 import Apply from "./Apply";
+import Admin from "./Admin";
 import Donate from "./Donate";
 import MeetFamilies from "./MeetFamilies";
 import axios from 'axios';
@@ -112,6 +113,16 @@ export default class MainRouter extends Component {
           {/* Paula added this code for the apply page */}
           <Route exact path="/apply" render={props => 
             <Apply
+              {...props}
+              authenticate={this.authenticate}
+              deAuthenticate={this.deAuthenticate}
+              authenticated={this.state.authenticated}
+              logout={this.logout}
+            />} 
+            />
+            {/* Paula added this code for the admin page */}
+          <Route exact path="/admin" render={props => 
+            <Admin
               {...props}
               authenticate={this.authenticate}
               deAuthenticate={this.deAuthenticate}

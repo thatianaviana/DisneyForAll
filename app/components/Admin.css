@@ -1,0 +1,16 @@
+#plans {
+  margin-left: 30%;
+  margin-top: 10%;
+  
+}
+
+ td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
