@@ -10,9 +10,9 @@ function FamilyCard(props) {
         <div className="card-body">
             <p className="card-text">{props.description}</p>
 
-            {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                 Meet the Family
-                </button> */}
+                </button>
         </div>
     </div>
     )
