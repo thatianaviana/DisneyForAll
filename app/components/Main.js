@@ -30,7 +30,7 @@ export default class Main extends Component {
                             <div className="row">
                                 <div className="col-md-12">
                                     <h1 className="brand-heading">Disney For All</h1>
-                                    <h3 className="intro-text">Because Every Child Deserves A Day In The Happiest Place On Earth</h3>
+                                    <h2 className="intro-text">Because Every Child Deserves A Day In The Happiest Place On Earth</h2>
 
                                     <a href="#about" className="btn btn-circle page-scroll">
                                         {/* <i className="fa down-arrow animated">

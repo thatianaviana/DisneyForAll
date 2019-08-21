@@ -2,11 +2,22 @@ import React, { Component } from 'react';
 import Nav from './children/Nav'
 import Modal from './Modal';
 import Footer from './Footer';
+import FamilyCard from './FamilyCard';
+import families from './families.js';
 
 require('./MeetFamilies.css');
 
 export default class MeetFamilies extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            families
+        };
+
+    }
     render() {
+        console.log(this.state.families);
         return (
             <div>
                 <Nav
@@ -19,67 +30,82 @@ export default class MeetFamilies extends Component {
                 <section className="meetfamilies">
                     <div className="container" >
                         <div className="row">
+
+                            {this.state.families.map (family => (
+                            <FamilyCard
+                                //handleClick={this.handleClick}
+                                id={family.id}
+                                key={family.id}
+                                image={family.image}
+                                name={family.name}
+                                description={family.description}
+                            />
+
+                            ))}
+                        
+                        
                             <div className="card text-white bg-light mb-3">
                                 <div className="card-header">Bywater Family</div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9PCh7bjFAoGuUAceQAgVP-9U-dQ-c7hZi1bCY6ZE_fgIk33PA" title="image 2" className="card-img-top" className="thumb" data-index="2" className="card-img-top" alt="..." />
+                                <img src="./assets/img/fam1.jpg" title="image 2" className="card-img-top" className="thumb" data-index="2" className="card-img-top" alt="..." />
+                                
                                 <div className="card-body">
                                     <p className="card-text"></p>
-
+{/* 
                                     {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                         Meet the Family
-                                        </button> */}
+                                        </button> */} */}
                                 </div>
                             </div>
                             <div className="card text-white bg-light mb-3">
                                 <div className="card-header">Ortiz Family</div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx-Vk_J0yFlWLQmieFJjejqHBiT-yUNRrpT9chExT8xkFpo9lRRA" title="image 2" className="card-img-top" className="thumb" data-index="2" className="card-img-top" alt="..." />
+                                <img src="./assets/img/fam2.jpg" title="image 2" className="card-img-top" className="thumb" data-index="2" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <p className="card-text"></p>
 
-                                    {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                         Meet the Family
-                                        </button> */}
+                                        </button>
                                 </div>
                             </div>
                             <div className="card text-white bg-light mb-3">
                                 <div className="card-header">Stine Family</div>
-                                <img src="https://www.rosenwater.com/wp-content/uploads/2019/05/AdobeStock_104541395-200x200.jpeg" title="image 3" className="card-img-top" className="thumb" data-index="3" className="card-img-top" alt="..." />
+                                <img src="./assets/img/fam3.jpg" title="image 3" className="card-img-top" className="thumb" data-index="3" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <p className="card-text"></p>
 
-                                    {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                         Meet the Family
-                                        </button> */}
+                                        </button>
                                 </div>
                             </div>
                             <div className="card text-white bg-light mb-3">
                                 <div className="card-header">Manilow Family</div>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkHXARDL7rtOmsTGY27RRtHQ4wel1lbAqDz4rpuZMPPLX00q4F" title="image 4" className="card-img-top" className="thumb" data-index="4" className="card-img-top" alt="..." />
+                                <img src="./assets/img/fam4.jpg" title="image 4" className="card-img-top" className="thumb" data-index="4" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <p className="card-text"></p>
 
-                                    {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                         Meet the Family
-                                        </button> */}
+                                        </button>
                                 </div>
                             </div>
 
                             <div className="card text-white bg-light mb-3">
                                 <div className="card-header">Abanda Family</div>
 
-                                <img src="https://via.placeholder.com/200" title="image 5" className="card-img-top" className="thumb" data-index="5" className="card-img-top" alt="..." />
+                                <img src="./assets/img/fam5.jpg" title="image 5" className="card-img-top" className="thumb" data-index="5" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <p className="card-text"></p>
 
-                                    {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                         Meet the Family
-                                        </button> */}
+                                        </button>
                                 </div>
                             </div>
                             <div className="card text-white bg-light mb-3">
                                 <div className="card-header">Heick Family</div>
 
-                                <img src="https://via.placeholder.com/200" title="image 6" className="card-img-top" className="thumb" data-index="6" className="card-img-top" alt="..." />
+                                <img src="./assets/img/fam6.jpg" title="image 6" className="card-img-top" className="thumb" data-index="6" className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <p className="card-text"></p>
 
