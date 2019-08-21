@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import families from '../families.json';
+import families from './families';
 import FamilyCard from './FamilyCard';
-
 
 require('./Modal.css');
 
 export default class Modal extends Component {
-  // state = {
-  //   families
-  // }
+  
   // handleClick = id => {
   //   console.log(id);
   // }
 
   render() {
+    
     // const familyBlurb = this.state.families.map (family => (
     //   <FamilyCard
     //     handleClick={this.handleClick}
