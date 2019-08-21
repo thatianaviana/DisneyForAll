@@ -6,8 +6,6 @@ module.exports = function(app){
 
 		const authCheckMiddleware = require('./config/middleware/authCheck');
 		app.use('/apis/trips', authCheckMiddleware);
-		console.log("poop");
-		debugger;
 
 		app.use('/apis/pricing', authCheckMiddleware);
 

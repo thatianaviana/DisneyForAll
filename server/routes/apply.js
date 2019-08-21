@@ -7,8 +7,8 @@ const apply_api = require('../apis/apply_api');
 //router.get('/', authCheck, apply_api.index);
 
 router.post('/apply', apply_api.createApply);
-console.log("poop");
-debugger;
+// console.log("poop");
+// debugger;
 
 
 module.exports = router;

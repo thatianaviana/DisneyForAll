@@ -5,7 +5,7 @@
     padding-left: 30%;
     /* margin-top: 5%; */
     margin-bottom: 40px;
-    background-image: url(../img/applicationBackground.jpg);
+    background-image: url(../../public/assets/img/applicationBackground.jpg);
     background-size: cover;
     background-attachment: fixed;
 
