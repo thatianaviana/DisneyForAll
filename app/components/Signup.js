@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
-import Nav from './children/Nav'
+import Nav from './children/Nav';
+import Footer from './Footer';
 
 require('./Signup.css');
 
@@ -13,14 +14,13 @@ export default class Signup extends Component {
 		super(props);
 		this.state = {
 			value: '',
-			username: '',
 			password: '',
 			passwordRepeat: '',
 			email: '',
 			emailRepeat: ''
 		};
 
-		this.handleUsernameValidation = this.handleUsernameValidation.bind(this);
+		// this.handleUsernameValidation = this.handleUsernameValidation.bind(this);
 		this.handlePasswordValidation = this.handlePasswordValidation.bind(this);
 		this.handlePasswordRepeat = this.handlePasswordRepeat.bind(this);
 		this.handleEmailValidation = this.handleEmailValidation.bind(this);
@@ -29,28 +29,28 @@ export default class Signup extends Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleUsernameValidation(event) {
-		// username is passed in
-		const usernameVal = this.refs.username.value,
-			usernameForm = this.refs.usernameForm,
-			usernameFeedback = this.refs.usernameFeedback;
-		// username is updated in state
-		this.setState({
-			'username': usernameVal
-		});
+	// handleUsernameValidation(event) {
+	// 	// username is passed in
+	// 	const usernameVal = this.refs.username.value,
+	// 		usernameForm = this.refs.usernameForm,
+	// 		usernameFeedback = this.refs.usernameFeedback;
+	// 	// username is updated in state
+	// 	this.setState({
+	// 		'username': usernameVal
+	// 	});
 
-		// username is checked to see if it matches certain length. If not, the screen will indicate it as such.
-		if (usernameVal.length < 6) {
-			usernameForm.classList.remove("has-success");
-			usernameForm.classList.add("has-error");
-			usernameFeedback.textContent = "username must be at least 6 characters long";
-		} else {
-			usernameForm.classList.remove("has-error");
+	// 	// username is checked to see if it matches certain length. If not, the screen will indicate it as such.
+	// 	if (usernameVal.length < 6) {
+	// 		usernameForm.classList.remove("has-success");
+	// 		usernameForm.classList.add("has-error");
+	// 		usernameFeedback.textContent = "username must be at least 6 characters long";
+	// 	} else {
+	// 		usernameForm.classList.remove("has-error");
 
-			usernameForm.classList.add("has-success");
-			usernameFeedback.textContent = "Username valid!";
-		}
-	}
+	// 		usernameForm.classList.add("has-success");
+	// 		usernameFeedback.textContent = "Username valid!";
+	// 	}
+	// }
 
 	handlePasswordValidation(event) {
 
@@ -154,14 +154,14 @@ export default class Signup extends Component {
 
 	signUpUser(userData) {
 		axios.post("/apis/users/signup", {
-			username: userData.username,
+			// username: userData.username,
 			email: userData.email,
 			password: userData.password
 		}).then(function (data) {
 			console.log("data stuff", data.data);
 			if (data.duplicateUser) {
 				// Replace with Modal
-				alert("Sorry, that username has been taken");
+				alert("Sorry, that Email has been taken");
 			} else if (data.data.success) {
 				console.log("yay!")
 				this.props.authenticate();
@@ -177,17 +177,17 @@ export default class Signup extends Component {
 	handleSubmit(event) {
 		event.preventDefault();
 
-		const username = this.state.username;
+		// const username = this.state.username;
 		const email = this.state.email;
 		const password = this.state.password;
 
 		let userData = {
-			username: username,
+			// username: username,
 			email: email,
 			password: password
 		};
 
-		if (!userData.username || !userData.email || !userData.password) {
+		if (!userData.email || !userData.password) {
 			return alert("Please don't leave fields blank");
 		}
 
@@ -196,7 +196,7 @@ export default class Signup extends Component {
 
 		this.setState({
 			value: '',
-			username: '',
+			// username: '',
 			password: '',
 			passwordRepeat: '',
 			email: '',
@@ -271,6 +271,7 @@ export default class Signup extends Component {
 						</div>
 					</section>
 				</div>
+				<Footer />
 			</div>
 		)
 	}

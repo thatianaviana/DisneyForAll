@@ -1,3 +1,6 @@
+const Apply = require ('../models/Apply');
+
+
 // exports.index = function(req, res) {
 // 	Apply
 //   .find()
@@ -10,10 +13,24 @@
 //   });
 // };
 exports.createApply = function(req, res) {
-  console.log("createApply", req.body);
-  var newApply = new Apply(req.body);
 
-  newApply.save().then(function(dbPost) {
-    res.json(dbPost);
+  Apply.findOne({'fullName' : req.body.fullName}, function (err, apply){
+
+    // check to see if theres already a user with that email
+  
+  console.log("createApply", req.body);
+  const newApply = new Apply();
+
+  newApply.fullName = req.body.fullName;
+  newApply.houseHoldIncome = req.body.houseHoldIncome;
+  newApply.aboutFamily = req.body.aboutFamily;
+
+  newApply.save()
+          .then(function() {
+          res.send({ success: true });
+        }).catch(function(err) {
+          res.json(err);
+        });
+
   });
 };

@@ -1,10 +1,39 @@
-.form {
-  margin: 20px;
+.applicationForm {
+    padding-top: 7%;
+    padding-bottom: 5%;
+    padding-right: 20px;
+    padding-left: 30%;
+    /* margin-top: 5%; */
+    margin-bottom: 40px;
+    background-image: url(../img/applicationBackground.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
-.form input {
+.applicationInputs{
   display: block;
-  margin-top: 5px;
+  margin-top: 5%;
   margin-bottom: 5px;
   width: 100%;
+  margin-left: 30%;
+}
+
+#submitButton {
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%
+}
+
+#inputPicture {
+  margin-left: 30%;
+}
+
+.appContainer{
+  background-color: white;
+  border-style: solid;
+  border-width: 3px;
+  width: 60%;
+  
 }
