@@ -1,12 +1,15 @@
-var express = require('express');
-var router  = express.Router();
+const express = require('express');
+const router  = express.Router();
 
-var apply_api = require('../apis/apply_api.js');
-var authCheck = require("../config/middleware/authCheck");
+const apply_api = require('../apis/apply_api');
+// var authCheck = require("../config/middleware/authCheck");
 
 //router.get('/', authCheck, apply_api.index);
 
-router.post('/apply/new', authCheck, apply_api.createApply);
+router.post('/apply', apply_api.createApply);
+// console.log("poop");
+// debugger;
+
 
 module.exports = router;
 
