@@ -1,119 +1,139 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import Nav from './children/Nav';
+import Footer from './Footer';
 import axios from 'axios';
-import Nav from './children/Nav'
+import { Redirect } from 'react-router-dom';
+import Auth from './utils/Auth';
 
 require('./Apply.css');
 
-export default class Apply extends Component {
+
+ export default class Apply extends Component {
 
     constructor(props) {
-        super(props);
-        this.state = {
-          fullName: '',
-          income: '',
-          aboutFamily: '',
-          message:''
-        };
-    
-        this.handleOnClick = this.handleOnClick.bind(this);
-      }
-// state = {
-//     message: ""
-// }
+      super(props);
+      this.state = {
+        fullName: "",
+        houseHoldIncome: "",
+        aboutFamily: "",
+        photo: "",
+      };
+  
+      this.handleInputChange = this.handleInputChange.bind(this);
+      this.createApply = this.createApply.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
 
-handleOnClick() {
+    }
+  
+    handleInputChange(event) {
+      const target = event.target;
+      // const value = target.type === 'checkbox' ? target.checked : target.value;
+      const name = target.name;
+  
+      this.setState({ 
+        [name]: target.value
+      });
+    }
 
-    let fullName = $("#fullName").val();
-    let familyIncome = $("#income").val();
-    let aboutFamily = $("#aboutFamily").val();
-    console.log("onclick", fullName, familyIncome, aboutFamily)
+    createApply(applyData) {
+      console.log("hello");
+      // debugger;
+      axios.post("/apis/apply", {
+        // username: userData.username,
+        fullName: applyData.fullName,
+        houseHoldIncome: applyData.houseHoldIncome,
+        aboutFamily: applyData.aboutFamily
 
-    let object = {
+      }).then(function (data) {
+        console.log("data stuff", data.data);
+      }.bind(this)).catch(function (err) {
+        console.log(err);
+      });
+    }
+  
+    handleSubmit(event) {
+      event.preventDefault();
+  
+      // const username = this.state.username;
+      const fullName = this.state.fullName;
+      const houseHoldIncome = this.state.houseHoldIncome;
+      const aboutFamily = this.state.aboutFamily;
+
+      let applyData = {
+        // username: username,
         fullName: fullName,
-        income: familyIncome,
-        aboutFamily: aboutFamily
+        houseHoldIncome: houseHoldIncome,
+        aboutFamily: aboutFamily,
+
+      };
+  
+  
+      // If we have an email and password, run the signUpUser function
+      // this.createApply(applyData);
+  
+      // this.setState({
+      //   value: '',
+      //   // username: '',
+      //   fullName: '',
+      //   houseHoldIncome: '',
+      //   aboutFamily: '',
+      // });
     }
 
-    axios.post('/apply/new', object)
-    .then(function (data) {
-      console.log(data);
-    //   if (data.data.success) {
-    //     this.props.authenticate();
-    //     this.setState({
-    //       redirectToReferrer: true
-    //     });
-    //   } else {
-    //     alert(data.data.message);
-      })
-    }
-//     // axios call
-//     //("/apply/new", object, function (data) {
-//     //    console.log(data)
-//     // })
-//     // need to build object to send Ajax call to database
-//     // ajax call for update database in apply routes file = /api/apply/new
-//     // what to do when come back
-
-
-render() {
-    return (
+    render() {
+      return (
         <div>
-            <Nav
-                authenticated={this.props.authenticated}
-                authenticate={this.props.authenticate}
-                deAuthenticate={this.props.deAuthenticate}
-                logout={this.props.logout}
-            />
+        <Nav
+            authenticated={this.props.authenticated}
+            authenticate={this.props.authenticate}
+            deAuthenticate={this.props.deAuthenticate}
+            logout={this.props.logout}
+        />
+      
+     
+        
+        <form className="applicationForm">
+          <div className="appContainer">
+          <label className="applicationInputs">
+            Full Name:
+            <br/>
+            <input
+              name="fullName"
+              type="text"
+              checked={this.state.fullName}
+              onChange={this.handleInputChange} />
+          </label>
+          <br />
+          <label className="applicationInputs">
+            Household Income:
+            <br/>
+            <input
+              name="houseHoldIncome"
+              type="number"
+              value={this.state.houseHoldIncome}
+              onChange={this.handleInputChange} />
+          </label>
+          <br/>
+          <label className="applicationInputs">
+          About your Family:
+          <br/>
+          <textarea value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <br/>
+        <input id="inputPicture" type="file" />
+        <br/>
+        <br/>
 
-            <section id="plans">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12 text-center">
-                            <div className="panel panel-danger panel-pricing">
-                                <div className="panel-heading">
-                                    <h3>To Apply Please Fill Out All The Information Below</h3>
-                                </div>
+          <button type="submit" onClick= {this.createApply}>Submit</button>
+          
+          <br/>
 
-                                <form>
-                                    <div className="form-group col-md-6 text-left">
-                                        <p>Full Name</p>
-                                        <input type="name" className="form-control" id="fullName" />
-                                    </div>
-                                    <div className="form-group col-md-6 text-left">
-                                        <p>Annual Household Income</p>
-                                        <input type="amount" className="form-control" id="income" />
-                                    </div>
-
-                                    {/* <div class="input-group mb-3 text-left"/>
-                                    <div class="input-group-prepend">
-                                        <p>Annual Income</p>
-                                        <span class="input-group-text">$</span>
-                                </div>
- */}
-                                    <div className="form-group col-md-10 text-left">
-                                        <p>About My Family</p>
-                                        <textarea className="form-control" id="aboutFamily" rows="3"></textarea>
-                                    </div>
-
-                                    <div className="add-file col-md-6 text-left">
-                                        <p>Share a picture of your family</p>
-                                        <input type="file" id="familyPicture" />
-                                    </div>
-
-                                </form>
-
-                                <br></br>
-                                <div className="panel-footer">
-                                    <a onclick={this.handleOnClick()} className="btn btn-lg btn-block btn-success" id="submit" href="#">Submit!</a>
-                                </div>
-                                {/* onclick={this.handleOnClick()} */}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
-}
-}
+          </div>
+        </form>
+        <Footer />
+    </div>
+      );
+    }
+    
+  }
+  

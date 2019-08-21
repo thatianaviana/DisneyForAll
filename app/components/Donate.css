@@ -10,7 +10,7 @@
 }
 
 .donation{
-  background-image: url(../img/happy_girl.jpg);
+  background-image: url(../../public/assets/img/happy_girl.jpg);
   background-position: right;
   background-size: cover;
   position: relative;  
@@ -31,4 +31,7 @@
   .donation{
     background-position: center;
   }
+}
+.blurb {
+  color: white;
 }

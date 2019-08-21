@@ -61,7 +61,7 @@ exports.loginUser = (req, res, next) => {
 // register a user
 exports.signUpUser = function(req,res) {
 
-  User.findOne({ 'username' :  req.body.username }, function(err, user) {
+  User.findOne({ 'email' :  req.body.email }, function(err, user) {
 
     // check to see if theres already a user with that email
     if (user) {
@@ -74,7 +74,6 @@ exports.signUpUser = function(req,res) {
         const newUser       = new User();
 
         // set the user's local credentials
-        newUser.username    = req.body.username;
         newUser.email       = req.body.email;
         newUser.password    = newUser.generateHash(req.body.password);
 

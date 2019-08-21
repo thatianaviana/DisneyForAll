@@ -43,10 +43,10 @@
 
   .meetfamilies {
       /* background: url(../img/happy.jpg); */
-      background-image: url(../img/disneyland.jpg);
+      background-image: url(../../public/assets/img/disneyland.jpg);
       background-size: cover;
       background-attachment: fixed;
-      margin-top:50px;
+      margin-top:70px;
   }
   .families {
     border: solid 3px black;
