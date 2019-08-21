@@ -10,7 +10,7 @@ module.exports = function(app){
 		app.use('/apis/pricing', authCheckMiddleware);
 
 		app.use('/apis/users', users);
-		app.use('/apply', apply);
+		app.use('/apis/apply', apply);
 		app.use('/apis/trips', trips);
 		//other routes..
 }

@@ -36,22 +36,25 @@ require('./Apply.css');
     }
 
     createApply() {
+      event.preventDefault();
       console.log("hello");
       console.log(this.state);
       // debugger;
-      axios.post("/apply", {
+      axios.post("/apis/apply/apply", {
         // username: userData.username,
         fullName: this.state.fullName,
         houseHoldIncome: this.state.houseHoldIncome,
         aboutFamily: this.state.aboutFamily
 
       }).then(function (data) {
-        debugger;
-        this.setState({
-          redirectToReferrer: true
+        console.log('hello we sent data');
+        // debugger;
+        // this.setState({
+        //   redirectToReferrer: true
         
-        });
-      }.bind(this)).catch(function (err) {
+        // });
+      })
+      .catch(function (err) {
         console.log(err);
       });
       // debugger;

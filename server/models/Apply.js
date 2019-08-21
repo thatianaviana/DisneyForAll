@@ -16,7 +16,7 @@ const applySchema = mongoose.Schema({
         // required: [true, 'Please enter your Full Name.']
     },
     houseHoldIncome: {
-        type: String,
+        type: Number,
         // required: [true, 'Please enter your yearly Household Income']
     },
     aboutFamily: {

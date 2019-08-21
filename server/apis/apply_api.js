@@ -15,6 +15,7 @@ const Apply = require ('../models/Apply');
 //   });
 // };
 exports.createApply = function(req, res) {
+  // console.log(`----------------------- nuts ---------------------`)
 
   Apply.findOne({'fullName' : req.body.fullName}, function (err, apply){
 
