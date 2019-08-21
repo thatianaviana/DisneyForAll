@@ -21,7 +21,7 @@ require('./Apply.css');
   
       this.handleInputChange = this.handleInputChange.bind(this);
       this.createApply = this.createApply.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+      // this.handleSubmit = this.handleSubmit.bind(this);
 
     }
   
@@ -35,37 +35,43 @@ require('./Apply.css');
       });
     }
 
-    createApply(applyData) {
+    createApply() {
       console.log("hello");
+      console.log(this.state);
       // debugger;
-      axios.post("/apis/apply", {
+      axios.post("/apply", {
         // username: userData.username,
-        fullName: applyData.fullName,
-        houseHoldIncome: applyData.houseHoldIncome,
-        aboutFamily: applyData.aboutFamily
+        fullName: this.state.fullName,
+        houseHoldIncome: this.state.houseHoldIncome,
+        aboutFamily: this.state.aboutFamily
 
       }).then(function (data) {
-        console.log("data stuff", data.data);
+        debugger;
+        this.setState({
+          redirectToReferrer: true
+        
+        });
       }.bind(this)).catch(function (err) {
         console.log(err);
       });
+      // debugger;
     }
   
-    handleSubmit(event) {
-      event.preventDefault();
-  
-      // const username = this.state.username;
-      const fullName = this.state.fullName;
-      const houseHoldIncome = this.state.houseHoldIncome;
-      const aboutFamily = this.state.aboutFamily;
+    // handleSubmit(event) {
+    //   event.preventDefault();
+    //   // debugger;
+    //   // const username = this.state.username;
+    //   const fullName = this.state.fullName;
+    //   const houseHoldIncome = this.state.houseHoldIncome;
+    //   const aboutFamily = this.state.aboutFamily;
 
-      let applyData = {
-        // username: username,
-        fullName: fullName,
-        houseHoldIncome: houseHoldIncome,
-        aboutFamily: aboutFamily,
+      // let applyData = {
+      //   // username: username,
+      //   fullName: fullName,
+      //   houseHoldIncome: houseHoldIncome,
+      //   aboutFamily: aboutFamily,
 
-      };
+      // };
   
   
       // If we have an email and password, run the signUpUser function
@@ -78,7 +84,7 @@ require('./Apply.css');
       //   houseHoldIncome: '',
       //   aboutFamily: '',
       // });
-    }
+    // }
 
     render() {
       return (
@@ -124,7 +130,7 @@ require('./Apply.css');
         <br/>
         <br/>
 
-          <button type="submit" onClick= {this.createApply}>Submit</button>
+          <button id="submitButton" type="submit" onClick= {this.createApply}>Submit</button>
           
           <br/>
 
