@@ -13,7 +13,7 @@ var applySchema = mongoose.Schema({
         max: 100,
         required: [true, 'Please enter your Full Name.']
     },
-    income: {
+    houseHoldIncome: {
         type: Number,
         required: [true, 'Please enter your yearly Household Income']
     },

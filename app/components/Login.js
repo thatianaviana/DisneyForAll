@@ -12,19 +12,19 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: '',
       redirectToReferrer: false
     };
 
-    this.handleUsernameChange = this.handleUsernameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.loginUser = this.loginUser.bind(this);
   }
 
-  handleUsernameChange(event) {
+  handleEmailChange(event) {
     this.setState({
-      username: event.target.value
+      email: event.target.value
     });
   }
 
@@ -52,22 +52,22 @@ export default class Login extends Component {
       });
 
     this.setState({
-      username: "",
+      email: "",
       password: ""
     });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    const usernameInput = this.state.username;
+    const emailInput = this.state.email;
     const passwordInput = this.state.password;
 
     const objSubmit = {
-      username: usernameInput,
+      email: emailInput,
       password: passwordInput
     }
 
-    if (!objSubmit.username || !objSubmit.password) {
+    if (!objSubmit.email || !objSubmit.password) {
       return;
     }
     // If we have an email and password we run the loginUser function and clear the form
@@ -75,8 +75,10 @@ export default class Login extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: '/' } };
+    const { from } = this.props.location.state || { from: { pathname: '/admin' } };
     const { redirectToReferrer } = this.state;
+    // const { to } = { from: { pathname: '/' } };
+
 
     if (redirectToReferrer) {
       return (
@@ -95,7 +97,7 @@ export default class Login extends Component {
         <div className="loginmodal-container">
           <h1 className="">Log In to Your Account</h1><br />
           <form className="login" onSubmit={this.handleSubmit.bind(this)}>
-            <input id="username-input" ref="user" type="text" name="user" placeholder="Username" onChange={this.handleUsernameChange} value={this.state.username} />
+            <input id="email-input" ref="user" type="text" name="user" placeholder="Email" onChange={this.handleEmailChange} value={this.state.email} />
             <input id="password-input" ref="password" type="password" name="pass" placeholder="Password" onChange={this.handlePasswordChange} value={this.state.password} />
             <input type="submit" name="login" className="login loginmodal-submit" value="Login" />
           </form>
