@@ -21,7 +21,10 @@ footer p{
     margin:5px;
     font-size:25px;
 }
-
+.footerblurb {
+    font-size: 13px;
+    color: white;
+}
 
 
 
