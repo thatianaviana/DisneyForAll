@@ -45,7 +45,6 @@ require('./Apply.css');
         fullName: this.state.fullName,
         houseHoldIncome: this.state.houseHoldIncome,
         aboutFamily: this.state.aboutFamily
-
       }).then(function (data) {
         console.log('hello we sent data');
         // debugger;
@@ -126,7 +125,11 @@ require('./Apply.css');
           <label className="applicationInputs">
           About your Family:
           <br/>
-          <textarea value={this.state.value} onChange={this.handleChange} />
+          <textarea 
+          name ="aboutFamily"
+          type = "string"
+          value={this.state.aboutFamily} 
+          onChange={this.handleInputChange} />
         </label>
         <br/>
         <input id="inputPicture" type="file" />
