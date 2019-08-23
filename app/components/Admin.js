@@ -29,9 +29,9 @@ export default class Admin extends Component {
           families: data.data
 
         })
-          .catch(function (err) {
-            console.log(err);
-          })
+
+      }).catch(function (err) {
+        console.log(err);
 
       })
 
