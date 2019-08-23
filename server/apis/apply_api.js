@@ -27,7 +27,8 @@ exports.createApply = function(req, res) {
   newApply.fullName = req.body.fullName;
   newApply.houseHoldIncome = req.body.houseHoldIncome;
   newApply.aboutFamily = req.body.aboutFamily;
-
+// console.log(req.body.aboutFamily);
+// debugger;
   newApply.save()
           .then(function() {
           res.send({ success: true });
