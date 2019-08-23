@@ -24,7 +24,7 @@ export default class Admin extends Component {
     axios.get("/apis/admin")
       .then(data => {
 
-
+        console.log(data.data)
         this.setState({
           families: data.data
 
