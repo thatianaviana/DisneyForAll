@@ -24,9 +24,9 @@ export default class Admin extends Component {
     axios.get("/apis/admin")
       .then(data=> {
         console.log('Data that is sent =', data.data);
-        console.log(data.data[5].fullName);
-        console.log(data.data[5].houseHoldIncome);
-        console.log(data.data[5].aboutFamily);
+        // console.log(data.data[5].fullName);
+        // console.log(data.data[5].houseHoldIncome);
+        // console.log(data.data[5].aboutFamily);
 
         this.setState({
           families: data.data

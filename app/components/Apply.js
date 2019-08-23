@@ -136,7 +136,7 @@ require('./Apply.css');
         <br/>
         <br/>
 
-          <button id="submitButton" type="submit" onClick= {this.createApply}>Submit</button>
+          <button id="submitButton" className="applyButton" type="button" className="btn btn-outline-info"type="submit" onClick= {this.createApply}>Submit</button>
           
           <br/>
 
