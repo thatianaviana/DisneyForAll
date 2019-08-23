@@ -7,7 +7,7 @@ require('./AboutUs.css');
 export default class AboutUs extends Component {
     render() {
         return (
-            <div>
+            <div className="newAbout">
                 <Nav
                     authenticated={this.props.authenticated}
                     authenticate={this.props.authenticate}

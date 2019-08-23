@@ -5,38 +5,29 @@ import FamilyCard from './FamilyCard';
 require('./Modal.css');
 
 export default class Modal extends Component {
-  
-  // handleClick = id => {
-  //   console.log(id);
-  // }
+
 
   render() {
-    
-    // const familyBlurb = this.state.families.map (family => (
-    //   <FamilyCard
-    //     handleClick={this.handleClick}
-    //     id={family.id}
-    //     key={family.id}
-    //    />
-
-    // ))
+  
     return (
       <div>
-        <div className="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 id="modal-title" id="exampleModalLongTitle">Family Name Should Pop Up Here</h5>
+                <h5 id="modal-title" id="exampleModalLongTitle">{this.props.modalInfo.famName}</h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div id="modal-body">
                 <div id="modal-image"></div>
-                <p id="modal-description">Blurb about the family should pop up here</p>
+                <p id="modal-description">{this.props.modalInfo.famDescription}</p>
+                <br></br>
+                <p id="modal-description">{this.props.modalInfo.famDescriptionTwo}</p>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button className="modalButton" type="button" className="btn btn-outline-info" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
