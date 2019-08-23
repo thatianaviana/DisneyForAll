@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-
 require('./nav.css');
-
 export default class Nav extends Component {
   render() {
     return (
       <div className="fixed-top">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            {/* <img className="icon-middle-nav-mobile" src={require("../img/logo.jpg")} /> */}
-            <NavLink to="/" className="navbar-brand"> {/* <img src={require("../../img/logo.jpg")} alt="logo" className="brand-logo" />  */}Disney For All</NavLink>
+            {/* <img className="icon-middle-nav-mobile" src={require("./assets/img/logo.jpg")} /> */}
+            {/* <img src="./assets/img/logo.png" alt="logo" className="brand-logo" /> */}
+            <NavLink to="/" className="navbar-brand"> Disney For All</NavLink>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -37,7 +36,6 @@ export default class Nav extends Component {
                     <a className="nav-link" href="/donate">Donate</a>
                 </li>
                 )}
-
                 {this.props.authenticated ? (
                   <li className="nav-item">
                     <NavLink to="/" onClick={this.props.logout} className="nav-link" ><div className="page-scroll nav-left-text" data-toggle="modal">Logout</div></NavLink>
@@ -47,7 +45,6 @@ export default class Nav extends Component {
                       <NavLink to={"/login"} className="nav-link"><div className="page-scroll nav-left-text" data-toggle="modal">Login</div></NavLink>
                     </li>
                   )}
-
               </ul>
             </div>
           </div>
@@ -56,5 +53,3 @@ export default class Nav extends Component {
     );
   }
 }
-
-

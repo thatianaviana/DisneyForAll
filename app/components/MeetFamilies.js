@@ -12,10 +12,25 @@ export default class MeetFamilies extends Component {
         super(props);
 
         this.state = {
-            families
+            families,
+            modal: {
+                famName: '',
+                famDescription: '',
+                famDescriptionTwo: ''
+                
+            }
         };
 
+        this.handleClick = this.handleClick.bind(this);
+
     }
+
+    handleClick (name, description, descriptionTwo){
+
+        this.setState({modal : {famName: name, famDescription: description, famDescriptionTwo: descriptionTwo}});
+
+    }
+
     render() {
         console.log(this.state.families);
         return (
@@ -33,90 +48,22 @@ export default class MeetFamilies extends Component {
 
                             {this.state.families.map (family => (
                             <FamilyCard
-                                //handleClick={this.handleClick}
+                                handleClick={this.handleClick}
                                 id={family.id}
                                 key={family.id}
                                 image={family.image}
                                 name={family.name}
                                 description={family.description}
+                                descriptionTwo={family.descriptionTwo}
                             />
 
                             ))}
                         
-                        
-                            <div className="card text-white bg-light mb-3">
-                                <div className="card-header">Bywater Family</div>
-                                <img src="./assets/img/fam1.jpg" title="image 2" className="card-img-top" className="thumb" data-index="2" className="card-img-top" alt="..." />
-                                
-                                <div className="card-body">
-                                    <p className="card-text"></p>
-{/* 
-                                    {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                        Meet the Family
-                                        </button> */} */}
-                                </div>
-                            </div>
-                            <div className="card text-white bg-light mb-3">
-                                <div className="card-header">Ortiz Family</div>
-                                <img src="./assets/img/fam2.jpg" title="image 2" className="card-img-top" className="thumb" data-index="2" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <p className="card-text"></p>
-
-                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                        Meet the Family
-                                        </button>
-                                </div>
-                            </div>
-                            <div className="card text-white bg-light mb-3">
-                                <div className="card-header">Stine Family</div>
-                                <img src="./assets/img/fam3.jpg" title="image 3" className="card-img-top" className="thumb" data-index="3" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <p className="card-text"></p>
-
-                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                        Meet the Family
-                                        </button>
-                                </div>
-                            </div>
-                            <div className="card text-white bg-light mb-3">
-                                <div className="card-header">Manilow Family</div>
-                                <img src="./assets/img/fam4.jpg" title="image 4" className="card-img-top" className="thumb" data-index="4" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <p className="card-text"></p>
-
-                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                        Meet the Family
-                                        </button>
-                                </div>
-                            </div>
-
-                            <div className="card text-white bg-light mb-3">
-                                <div className="card-header">Abanda Family</div>
-
-                                <img src="./assets/img/fam5.jpg" title="image 5" className="card-img-top" className="thumb" data-index="5" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <p className="card-text"></p>
-
-                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                        Meet the Family
-                                        </button>
-                                </div>
-                            </div>
-                            <div className="card text-white bg-light mb-3">
-                                <div className="card-header">Heick Family</div>
-
-                                <img src="./assets/img/fam6.jpg" title="image 6" className="card-img-top" className="thumb" data-index="6" className="card-img-top" alt="..." />
-                                <div className="card-body">
-                                    <p className="card-text"></p>
-
-                                    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                        Meet the Family
-                                            </button>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                    <Modal />
+                    <Modal 
+                    modalInfo={this.state.modal}
+                    />
                 </section>
                 <Footer />
             </div>

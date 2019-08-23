@@ -21,7 +21,7 @@ require('./Apply.css');
   
       this.handleInputChange = this.handleInputChange.bind(this);
       this.createApply = this.createApply.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+      // this.handleSubmit = this.handleSubmit.bind(this);
 
     }
   
@@ -35,37 +35,45 @@ require('./Apply.css');
       });
     }
 
-    createApply(applyData) {
+    createApply() {
+      event.preventDefault();
       console.log("hello");
+      console.log(this.state);
       // debugger;
-      axios.post("/apis/apply", {
+      axios.post("/apis/apply/apply", {
         // username: userData.username,
-        fullName: applyData.fullName,
-        houseHoldIncome: applyData.houseHoldIncome,
-        aboutFamily: applyData.aboutFamily
-
+        fullName: this.state.fullName,
+        houseHoldIncome: this.state.houseHoldIncome,
+        aboutFamily: this.state.aboutFamily
       }).then(function (data) {
-        console.log("data stuff", data.data);
-      }.bind(this)).catch(function (err) {
+        console.log('hello we sent data');
+        // debugger;
+        // this.setState({
+        //   redirectToReferrer: true
+        
+        // });
+      })
+      .catch(function (err) {
         console.log(err);
       });
+      // debugger;
     }
   
-    handleSubmit(event) {
-      event.preventDefault();
-  
-      // const username = this.state.username;
-      const fullName = this.state.fullName;
-      const houseHoldIncome = this.state.houseHoldIncome;
-      const aboutFamily = this.state.aboutFamily;
+    // handleSubmit(event) {
+    //   event.preventDefault();
+    //   // debugger;
+    //   // const username = this.state.username;
+    //   const fullName = this.state.fullName;
+    //   const houseHoldIncome = this.state.houseHoldIncome;
+    //   const aboutFamily = this.state.aboutFamily;
 
-      let applyData = {
-        // username: username,
-        fullName: fullName,
-        houseHoldIncome: houseHoldIncome,
-        aboutFamily: aboutFamily,
+      // let applyData = {
+      //   // username: username,
+      //   fullName: fullName,
+      //   houseHoldIncome: houseHoldIncome,
+      //   aboutFamily: aboutFamily,
 
-      };
+      // };
   
   
       // If we have an email and password, run the signUpUser function
@@ -78,7 +86,7 @@ require('./Apply.css');
       //   houseHoldIncome: '',
       //   aboutFamily: '',
       // });
-    }
+    // }
 
     render() {
       return (
@@ -117,14 +125,18 @@ require('./Apply.css');
           <label className="applicationInputs">
           About your Family:
           <br/>
-          <textarea value={this.state.value} onChange={this.handleChange} />
+          <textarea 
+          name ="aboutFamily"
+          type = "string"
+          value={this.state.aboutFamily} 
+          onChange={this.handleInputChange} />
         </label>
         <br/>
         <input id="inputPicture" type="file" />
         <br/>
         <br/>
 
-          <button type="submit" onClick= {this.createApply}>Submit</button>
+          <button id="submitButton" type="submit" onClick= {this.createApply}>Submit</button>
           
           <br/>
 

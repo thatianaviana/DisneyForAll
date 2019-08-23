@@ -3,6 +3,11 @@
  background-color: #c59fc9!important;
 }
 
+.brand-logo {
+  width: 20px;
+  height: auto;
+}
+
 #navbarNav{
   justify-content: flex-end!important
 }
