@@ -59,6 +59,7 @@ export default class Admin extends Component {
                 <th scope="col">Name</th>
                 <th scope="col">Income</th>
                 <th scope="col">About Family</th>
+                <th scope="col">Post</th>
                 {/* <th scope="col">Family Picture</th> */}
               </tr>
             </thead>
