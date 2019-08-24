@@ -19,6 +19,7 @@ export default class Admin extends Component {
       families: []
     }
     this.handleClick = this.handleClick.bind(this)
+    this.deleteFamily = this.deleteFamily.bind(this)
   }
 
   componentDidMount() {
@@ -40,22 +41,15 @@ export default class Admin extends Component {
 
   handleClick(id) {
     console.log('the id for the family ', id);
-    // this.setState(prevState => {
-    //   const postedFamily = prevState.families.map(family => {
-    //     if (family._id === id) {
-    //       family.posted = !family.posted
-    //     }
-    //     return console.log(family)
-    //   })
-    //   console.log({
-    //     families: postedFamily
-    //   })
-    //   console.log('the posted family? ', postedFamily);
     axios.post('/apis/admin/update/' + id)
       .then(res => console.log(res.data))
       .catch(err => console.error(err));
     // })
     console.log('hello');
+  }
+
+  deleteFamily(id) {
+    console.log(id)
   }
 
 
@@ -83,6 +77,7 @@ export default class Admin extends Component {
                 <th scope="col">Income</th>
                 <th scope="col">About Family</th>
                 <th scope="col">Post</th>
+                <th scope="col">Delete</th>
                 {/* <th scope="col">Family Picture</th> */}
               </tr>
             </thead>
@@ -94,6 +89,7 @@ export default class Admin extends Component {
               {this.state.families.map(family =>
 
                 <Families
+                  deleteFamily={this.deleteFamily}
                   handleClick={this.handleClick}
                   id={family._id}
                   key={family._id}

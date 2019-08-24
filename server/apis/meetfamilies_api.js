@@ -7,7 +7,7 @@ exports.findFamily = function (req, res) {
 
         // check to see if theres already a user with that email
 
-        console.log("Find family who's posted is true", dbApply);
+        console.log("Find family who's post is true", dbApply);
         // const newApply = new Apply();
         res.json(dbApply)
 
