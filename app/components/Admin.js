@@ -18,6 +18,7 @@ export default class Admin extends Component {
     this.state = {
       families: []
     }
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
@@ -36,6 +37,22 @@ export default class Admin extends Component {
       })
 
   }
+
+  handleClick(id) {
+    this.setState(prevState => {
+      const postedFamily = prevState.families.map(family => {
+        if (family._id === id) {
+          family.posted = !family.posted
+        }
+        return console.log(family)
+      })
+      return console.log({
+        families: postedFamily
+      })
+    })
+  }
+
+
 
   render() {
 
@@ -70,7 +87,15 @@ export default class Admin extends Component {
               </tr>
               {this.state.families.map(family =>
 
-                <Families id={family._id} key={family._id} fullName={family.fullName} houseHoldIncome={family.houseHoldIncome} aboutFamily={family.aboutFamily} />
+                <Families
+                  handleClick={this.handleClick}
+                  id={family._id}
+                  key={family._id}
+                  fullName={family.fullName}
+                  houseHoldIncome={family.houseHoldIncome}
+                  aboutFamily={family.aboutFamily}
+
+                />
 
               )}
             </tbody>

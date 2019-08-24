@@ -8,7 +8,7 @@ export default class Modal extends Component {
 
 
   render() {
-  
+
     return (
       <div>
         <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -22,9 +22,8 @@ export default class Modal extends Component {
               </div>
               <div id="modal-body">
                 <div id="modal-image"></div>
-                <p id="modal-description">{this.props.modalInfo.famDescription}</p>
+                <p id="modal-description">{this.props.modalInfo.famaboutFamily}</p>
                 <br></br>
-                <p id="modal-description">{this.props.modalInfo.famDescriptionTwo}</p>
               </div>
               <div className="modal-footer">
                 <button className="modalButton" type="button" className="btn btn-outline-info" data-dismiss="modal">Close</button>
