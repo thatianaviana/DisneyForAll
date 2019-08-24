@@ -29,3 +29,11 @@ exports.postFamily = function (req, res) {
       });
   });
 }
+
+
+exports.deleteFamily = function (req, res) {
+  console.log('this is the family id ', req.params.id);
+  Apply.remove({ _id: req.params.id })
+    .then(() => res.json('Family deleted.'))
+    .catch(err => res.status(400).json('Error: ' + err));
+}

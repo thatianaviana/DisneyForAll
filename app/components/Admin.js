@@ -49,7 +49,11 @@ export default class Admin extends Component {
   }
 
   deleteFamily(id) {
-    console.log(id)
+    axios.delete('/apis/admin/' + id)
+      .then(response => { console.log(response.data) });
+    this.setState({
+      families: this.state.families.filter(family => family._id !== id)
+    })
   }
 
 

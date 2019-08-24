@@ -8,7 +8,9 @@ const admin_api = require('../apis/admin_api');
 
 router.get('/', admin_api.findAllFamilies);
 // console.log("poop");
-router.post('/update/:id', admin_api.postFamily)
+router.post('/update/:id', admin_api.postFamily);
+router.delete('/:id', admin_api.deleteFamily)
+
 // debugger;
 
 
