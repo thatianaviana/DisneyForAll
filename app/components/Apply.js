@@ -4,25 +4,22 @@ import Footer from './Footer';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
-
 require('./Apply.css');
-
-
  export default class Apply extends Component {
-
     constructor(props) {
       super(props);
       this.state = {
         fullName: "",
         houseHoldIncome: "",
         aboutFamily: "",
-        photo: "",
+        selectedFile: "",
+        // new
+        // selectedFile: "",
       };
   
       this.handleInputChange = this.handleInputChange.bind(this);
       this.createApply = this.createApply.bind(this);
       // this.handleSubmit = this.handleSubmit.bind(this);
-
     }
   
     handleInputChange(event) {
@@ -31,10 +28,11 @@ require('./Apply.css');
       const name = target.name;
   
       this.setState({ 
-        [name]: target.value
+        [name]: target.value,
+        // new
+        // selectedFile: event.target.file[0]
       });
     }
-
     createApply() {
       event.preventDefault();
       console.log("hello");
@@ -44,50 +42,30 @@ require('./Apply.css');
         // username: userData.username,
         fullName: this.state.fullName,
         houseHoldIncome: this.state.houseHoldIncome,
-        aboutFamily: this.state.aboutFamily
+        aboutFamily: this.state.aboutFamily,
+        selectedFile: this.state.selectedFile,
       }).then(function (data) {
         console.log('hello we sent data');
-        // debugger;
-        // this.setState({
-        //   redirectToReferrer: true
-        
-        // });
       })
       .catch(function (err) {
         console.log(err);
       });
-      // debugger;
     }
   
-    // handleSubmit(event) {
-    //   event.preventDefault();
-    //   // debugger;
-    //   // const username = this.state.username;
-    //   const fullName = this.state.fullName;
-    //   const houseHoldIncome = this.state.houseHoldIncome;
-    //   const aboutFamily = this.state.aboutFamily;
-
-      // let applyData = {
-      //   // username: username,
-      //   fullName: fullName,
-      //   houseHoldIncome: houseHoldIncome,
-      //   aboutFamily: aboutFamily,
-
-      // };
-  
-  
-      // If we have an email and password, run the signUpUser function
-      // this.createApply(applyData);
-  
-      // this.setState({
-      //   value: '',
-      //   // username: '',
-      //   fullName: '',
-      //   houseHoldIncome: '',
-      //   aboutFamily: '',
-      // });
-    // }
-
+    // fileSelectedHandler(event) {
+    //   this.setState({
+    //     selectedFile: event.target.files[0]
+    //     })
+    //   }
+    // // new
+    //   fileUploadHandler (){
+    //     const fd = new FormData();
+    //     fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
+    //     axios.post("/apis/apply/apply", fd)
+    //     .then (function (res) {
+    //       console.log(res)
+    //     });
+      // }
     render() {
       return (
         <div>
@@ -132,14 +110,31 @@ require('./Apply.css');
           onChange={this.handleInputChange} />
         </label>
         <br/>
-        <input id="inputPicture" type="file" />
+        <label className="applicationInputs">
+          Upload Family Photo:
+          <br/>
+          <input 
+          name= "selectedFile"
+          type = "string"
+          value={this.state.selectedFile}
+          id="inputPicture" 
+          type="file"
+          onChange={this.handleInputChange} />
+        </label>
+          {/* new */}
+        {/* <input 
+        name= "selectedFile"
+        value={this.state.selectedFile}
+        style={{display: 'none'}} 
+        type="file" 
+        onChange={this.handleInputChange}
+        ref={fileInput => this.fileInput = fileInput}/>
+        <button id="uploadPhoto" onClick={() => this.fileInput.click()}>Pick File</button>
+        <button onClick={this.fileUploadHandler}>Upload</button>  */}
         <br/>
-        <br/>
-
-          <button id="submitButton" className="applyButton" type="button" className="btn btn-outline-info"type="submit" onClick= {this.createApply}>Submit</button>
+          <button id="submitButton" className="modalButton" type="button" className="btn btn-info" type="submit" onClick= {this.createApply}>Submit</button>
           
           <br/>
-
           </div>
         </form>
         <Footer />
@@ -148,4 +143,3 @@ require('./Apply.css');
     }
     
   }
-  

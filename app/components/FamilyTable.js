@@ -9,10 +9,18 @@ const Families = props => (
       <td>{props.houseHoldIncome}</td>
       <td>{props.aboutFamily}</td>
       <td>
-      <button id="postbutton" type="button" className="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalLong" >
+        <button id="postbutton" type="button" className="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalLong" >
                 Post
             </button>
-        </td>
+      </td>
+      <td>In Progress</td>
+      <td>Approved</td>
+      <td> 
+        <button id="deletebutton" type="button" className="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalLong" >
+                Delete
+            </button>
+      </td>
+
       {/* <td>{props.family.date.substring(0,10)}</td> */}
       {/* <td>
         <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>

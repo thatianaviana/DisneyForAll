@@ -22,7 +22,7 @@ export default class Admin extends Component {
 
   componentDidMount() {
     axios.get("/apis/admin")
-      .then(data=> {
+      .then(data => {
         console.log('Data that is sent =', data.data);
         // console.log(data.data[5].fullName);
         // console.log(data.data[5].houseHoldIncome);
@@ -41,11 +41,9 @@ export default class Admin extends Component {
   }
 
   render() {
-    
+
     return (
       <div>
-       
-
         <Nav
           authenticated={this.props.authenticated}
           authenticate={this.props.authenticate}
@@ -63,19 +61,23 @@ export default class Admin extends Component {
                 <th scope="col">Income</th>
                 <th scope="col">About Family</th>
                 <th scope="col">Post</th>
+                <th scope="col">In Progress</th>
+                <th scope="col">Approved</th>
+                <th scope="col">Delete</th>
+
                 {/* <th scope="col">Family Picture</th> */}
               </tr>
             </thead>
             <tbody>
 
-          <tr>
-              {/* <td>{this.familiesList()}</td> */}
-          </tr>
+              <tr>
+                {/* <td>{this.familiesList()}</td> */}
+              </tr>
               {this.state.families.map(family =>
-                         
-                            <Families id={family._id} key={family._id} fullName={family.fullName} houseHoldIncome={family.houseHoldIncome} aboutFamily={family.aboutFamily}/>
-                        
-                        )}
+
+                <Families id={family._id} key={family._id} fullName={family.fullName} houseHoldIncome={family.houseHoldIncome} aboutFamily={family.aboutFamily} />
+
+              )}
             </tbody>
           </table>
         </section>
