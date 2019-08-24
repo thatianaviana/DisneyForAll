@@ -5,7 +5,7 @@
   "author": "Omar Patel",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --watch & nodemon ./server/bin/www",
+    "dev": "webpack --watch & node ./server/bin/www",
     "start": "node ./server/bin/www",
     "build": "webpack"
   },
