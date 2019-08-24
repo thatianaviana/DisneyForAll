@@ -47,6 +47,7 @@
       background-size: cover;
       background-attachment: fixed;
       margin-top:72px;
+      min-height:700px;
   }
   .families {
     border: solid 3px black;

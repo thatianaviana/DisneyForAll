@@ -19,7 +19,7 @@ export default class AboutUs extends Component {
                     <div className="container">
                         <h3 className="text-xxxl mb-sm mt-sm text-center">Our Team</h3>
                         <div className="row" >
-                            <div className="col-xl-4 col-md-6 mb-4">
+                            <div className="col-md-4 sm-12">
                                 <div className="card border-0 shadow">
                                     <img src="./assets/img/t2.jpg" className="card-img-top" alt="..." />
                                     <div className="card-body text-center">
@@ -29,7 +29,7 @@ export default class AboutUs extends Component {
                                 </div>
                             </div>
 
-                            <div className="col-xl-4 col-md-6 mb-4">
+                            <div className="col-md-4 sm-12">
                                 <div className="card border-0 shadow">
                                     <img src="./assets/img/p1.jpg" className="card-img-top" alt="..." />
                                     <div className="card-body text-center">
@@ -39,7 +39,7 @@ export default class AboutUs extends Component {
                                 </div>
                             </div>
 
-                            <div className="col-xl-4 col-md-6 mb-4">
+                            <div className="col-md-4 sm-12">
                                 <div className="card border-0 shadow">
                                     <img src="./assets/img/a1.jpg" className="card-img-top" alt="..." />
                                     <div className="card-body text-center">

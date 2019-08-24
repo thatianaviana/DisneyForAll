@@ -59,7 +59,7 @@ export default class MeetFamilies extends Component {
                     logout={this.props.logout}
                 />
 
-                <div className="meetfamilies">
+                <section className="meetfamilies">
                     <div className="container" >
                         <div className="row">
 
@@ -81,7 +81,7 @@ export default class MeetFamilies extends Component {
                     <Modal
                         modalInfo={this.state.modal}
                     />
-                </div>
+                </section>
                 <Footer />
             </div>
         );
