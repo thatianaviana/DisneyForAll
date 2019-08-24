@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
 import Families from "./FamilyTable";
-import CurrencyFormat from 'react-currency-format';
+
 
 
 require('./Admin.css');

@@ -4,8 +4,7 @@ import Footer from './Footer';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
-// import NumberFormat from 'react-number-format';
-import CurrencyFormat from 'react-currency-format';
+
 require('./Apply.css');
  export default class Apply extends Component {
     constructor(props) {
