@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
 import Families from "./FamilyTable";
+import CurrencyFormat from 'react-currency-format';
 
 
 require('./Admin.css');
@@ -24,9 +25,6 @@ export default class Admin extends Component {
     axios.get("/apis/admin")
       .then(data=> {
         console.log('Data that is sent =', data.data);
-        console.log(data.data[5].fullName);
-        console.log(data.data[5].houseHoldIncome);
-        console.log(data.data[5].aboutFamily);
 
         this.setState({
           families: data.data
@@ -62,6 +60,7 @@ export default class Admin extends Component {
                 <th scope="col">Name</th>
                 <th scope="col">Income</th>
                 <th scope="col">About Family</th>
+                <th scope="col">Family Photo</th>
                 <th scope="col">Post</th>
                 {/* <th scope="col">Family Picture</th> */}
               </tr>
@@ -73,7 +72,7 @@ export default class Admin extends Component {
           </tr>
               {this.state.families.map(family =>
                          
-                            <Families id={family._id} key={family._id} fullName={family.fullName} houseHoldIncome={family.houseHoldIncome} aboutFamily={family.aboutFamily}/>
+                            <Families id={family._id} key={family._id} fullName={family.fullName} houseHoldIncome={family.houseHoldIncome} aboutFamily={family.aboutFamily} selectedFile={family.selectedFile}/>
                         
                         )}
             </tbody>

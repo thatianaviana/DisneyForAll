@@ -1,4 +1,5 @@
 import React from 'react';
+import CurrencyFormat from 'react-currency-format';
 
 require('./FamilyTable.css');
 
@@ -6,8 +7,9 @@ require('./FamilyTable.css');
 const Families = props => (
     <tr>
       <td>{props.fullName}</td>
-      <td>{props.houseHoldIncome}</td>
+      <td> {props.houseHoldIncome}</td>
       <td>{props.aboutFamily}</td>
+      <td>{props.selectedFile}</td>
       <td>
       <button id="postbutton" type="button" className="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalLong" >
                 Post

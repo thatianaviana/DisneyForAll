@@ -4,6 +4,8 @@ import Footer from './Footer';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
+// import NumberFormat from 'react-number-format';
+import CurrencyFormat from 'react-currency-format';
 
 require('./Apply.css');
 
@@ -16,7 +18,11 @@ require('./Apply.css');
         fullName: "",
         houseHoldIncome: "",
         aboutFamily: "",
-        photo: "",
+        // selectedFile: "",
+
+        // fileInput: React.createRef()
+
+
       };
   
       this.handleInputChange = this.handleInputChange.bind(this);
@@ -31,7 +37,10 @@ require('./Apply.css');
       const name = target.name;
   
       this.setState({ 
-        [name]: target.value
+        [name]: target.value,
+
+        // new
+        // selectedFile: event.target.file[0]
       });
     }
 
@@ -44,52 +53,39 @@ require('./Apply.css');
         // username: userData.username,
         fullName: this.state.fullName,
         houseHoldIncome: this.state.houseHoldIncome,
-        aboutFamily: this.state.aboutFamily
+        aboutFamily: this.state.aboutFamily,
+        // selectedFile: this.state.selectedFile
+        // fileInput: this.state.fileInput.current.files[0].name
+
       }).then(function (data) {
         console.log('hello we sent data');
-        // debugger;
-        // this.setState({
-        //   redirectToReferrer: true
-        
-        // });
       })
       .catch(function (err) {
         console.log(err);
       });
-      // debugger;
     }
   
-    // handleSubmit(event) {
-    //   event.preventDefault();
-    //   // debugger;
-    //   // const username = this.state.username;
-    //   const fullName = this.state.fullName;
-    //   const houseHoldIncome = this.state.houseHoldIncome;
-    //   const aboutFamily = this.state.aboutFamily;
+    // fileSelectedHandler(event) {
+    //   this.setState({
+    //     selectedFile: event.target.files[0]
+    //     })
+    //   }
 
-      // let applyData = {
-      //   // username: username,
-      //   fullName: fullName,
-      //   houseHoldIncome: houseHoldIncome,
-      //   aboutFamily: aboutFamily,
 
-      // };
-  
-  
-      // If we have an email and password, run the signUpUser function
-      // this.createApply(applyData);
-  
-      // this.setState({
-      //   value: '',
-      //   // username: '',
-      //   fullName: '',
-      //   houseHoldIncome: '',
-      //   aboutFamily: '',
-      // });
-    // }
+    // // new
+    //   fileUploadHandler (){
+    //     const fd = new FormData();
+    //     fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
+    //     axios.post("/apis/apply/apply", fd)
+    //     .then (function (res) {
+    //       console.log(res)
+    //     });
+      // }
 
     render() {
       return (
+
+        
         <div>
         <Nav
             authenticated={this.props.authenticated}
@@ -112,16 +108,20 @@ require('./Apply.css');
               onChange={this.handleInputChange} />
           </label>
           <br />
+
+          
           <label className="applicationInputs">
             Household Income:
             <br/>
             <input
               name="houseHoldIncome"
-              type="number"
+              type="currency"
+              // prefix={'$'}
               value={this.state.houseHoldIncome}
               onChange={this.handleInputChange} />
           </label>
           <br/>
+
           <label className="applicationInputs">
           About your Family:
           <br/>
@@ -132,8 +132,31 @@ require('./Apply.css');
           onChange={this.handleInputChange} />
         </label>
         <br/>
-        <input id="inputPicture" type="file" />
-        <br/>
+
+        <label className="applicationInputs">
+          Upload Family Photo:
+          <br/>
+          <input 
+          name= "selectedFile"
+          type="file"
+          // ref={this.fileInput}
+          id="inputPicture" 
+          value={this.state.selectedFile}
+          onChange={this.handleInputChange} />
+        </label>
+
+
+          {/* new */}
+        {/* <input 
+        name= "selectedFile"
+        value={this.state.selectedFile}
+        style={{display: 'none'}} 
+        type="file" 
+        onChange={this.handleInputChange}
+        ref={fileInput => this.fileInput = fileInput}/>
+        <button id="uploadPhoto" onClick={() => this.fileInput.click()}>Pick File</button>
+        <button onClick={this.fileUploadHandler}>Upload</button>  */}
+
         <br/>
 
           <button id="submitButton" type="submit" onClick= {this.createApply}>Submit</button>
