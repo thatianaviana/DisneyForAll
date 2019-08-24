@@ -4,6 +4,8 @@ import Footer from './Footer';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
+// import NumberFormat from 'react-number-format';
+import CurrencyFormat from 'react-currency-format';
 require('./Apply.css');
  export default class Apply extends Component {
     constructor(props) {
@@ -12,9 +14,8 @@ require('./Apply.css');
         fullName: "",
         houseHoldIncome: "",
         aboutFamily: "",
-        selectedFile: "",
-        // new
         // selectedFile: "",
+        // fileInput: React.createRef()
       };
   
       this.handleInputChange = this.handleInputChange.bind(this);
@@ -43,7 +44,8 @@ require('./Apply.css');
         fullName: this.state.fullName,
         houseHoldIncome: this.state.houseHoldIncome,
         aboutFamily: this.state.aboutFamily,
-        selectedFile: this.state.selectedFile,
+        // selectedFile: this.state.selectedFile
+        // fileInput: this.state.fileInput.current.files[0].name
       }).then(function (data) {
         console.log('hello we sent data');
       })
@@ -68,6 +70,7 @@ require('./Apply.css');
       // }
     render() {
       return (
+        
         <div>
         <Nav
             authenticated={this.props.authenticated}
@@ -90,12 +93,14 @@ require('./Apply.css');
               onChange={this.handleInputChange} />
           </label>
           <br />
+          
           <label className="applicationInputs">
             Household Income:
             <br/>
             <input
               name="houseHoldIncome"
-              type="number"
+              type="currency"
+              // prefix={'$'}
               value={this.state.houseHoldIncome}
               onChange={this.handleInputChange} />
           </label>
@@ -115,10 +120,10 @@ require('./Apply.css');
           <br/>
           <input 
           name= "selectedFile"
-          type = "string"
-          value={this.state.selectedFile}
-          id="inputPicture" 
           type="file"
+          // ref={this.fileInput}
+          id="inputPicture" 
+          value={this.state.selectedFile}
           onChange={this.handleInputChange} />
         </label>
           {/* new */}
@@ -132,7 +137,7 @@ require('./Apply.css');
         <button id="uploadPhoto" onClick={() => this.fileInput.click()}>Pick File</button>
         <button onClick={this.fileUploadHandler}>Upload</button>  */}
         <br/>
-          <button id="submitButton" className="modalButton" type="button" className="btn btn-info" type="submit" onClick= {this.createApply}>Submit</button>
+          <button id="submitButton" type="submit" onClick= {this.createApply}>Submit</button>
           
           <br/>
           </div>

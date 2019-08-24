@@ -18,15 +18,15 @@
     "bootstrap": "^3.4.1",
     "browser-sync": "^2.13.0",
     "chai": "^4.0.0",
-    "css-loader": "^0.28.4",
+    "css-loader": "^3.2.0",
     "file-loader": "^0.11.2",
     "font-awesome": "^4.6.3",
     "jquery": "^3.4.1",
     "sinon": "^2.3.2",
     "sinon-mongoose": "^2.0.2",
     "style-loader": "^0.18.2",
-    "url-loader": "^0.5.9",
-    "webpack": "^1.13.1"
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.2"
   },
   "plugins": [
     "transform-class-properties"
@@ -50,7 +50,9 @@
     "passport-local": "^1.0.0",
     "react": "^15.6.1",
     "react-bootstrap": "^1.0.0-beta.11",
+    "react-currency-format": "^1.0.0",
     "react-dom": "^15.6.1",
+    "react-number-format": "^4.2.0",
     "react-router-dom": "^4.1.1"
   }
 }
