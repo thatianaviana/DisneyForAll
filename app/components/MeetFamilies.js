@@ -50,7 +50,6 @@ export default class MeetFamilies extends Component {
     }
 
     render() {
-        console.log(this.state.families);
         return (
             <div>
                 <Nav
@@ -60,7 +59,7 @@ export default class MeetFamilies extends Component {
                     logout={this.props.logout}
                 />
 
-                <section className="meetfamilies">
+                <div className="meetfamilies">
                     <div className="container" >
                         <div className="row">
 
@@ -82,7 +81,7 @@ export default class MeetFamilies extends Component {
                     <Modal
                         modalInfo={this.state.modal}
                     />
-                </section>
+                </div>
                 <Footer />
             </div>
         );
