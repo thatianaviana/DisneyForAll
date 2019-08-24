@@ -6,12 +6,8 @@ import { Redirect } from 'react-router-dom';
 import Auth from './utils/Auth';
 // import NumberFormat from 'react-number-format';
 import CurrencyFormat from 'react-currency-format';
-
 require('./Apply.css');
-
-
  export default class Apply extends Component {
-
     constructor(props) {
       super(props);
       this.state = {
@@ -19,16 +15,12 @@ require('./Apply.css');
         houseHoldIncome: "",
         aboutFamily: "",
         // selectedFile: "",
-
         // fileInput: React.createRef()
-
-
       };
   
       this.handleInputChange = this.handleInputChange.bind(this);
       this.createApply = this.createApply.bind(this);
       // this.handleSubmit = this.handleSubmit.bind(this);
-
     }
   
     handleInputChange(event) {
@@ -38,12 +30,10 @@ require('./Apply.css');
   
       this.setState({ 
         [name]: target.value,
-
         // new
         // selectedFile: event.target.file[0]
       });
     }
-
     createApply() {
       event.preventDefault();
       console.log("hello");
@@ -56,7 +46,6 @@ require('./Apply.css');
         aboutFamily: this.state.aboutFamily,
         // selectedFile: this.state.selectedFile
         // fileInput: this.state.fileInput.current.files[0].name
-
       }).then(function (data) {
         console.log('hello we sent data');
       })
@@ -70,8 +59,6 @@ require('./Apply.css');
     //     selectedFile: event.target.files[0]
     //     })
     //   }
-
-
     // // new
     //   fileUploadHandler (){
     //     const fd = new FormData();
@@ -81,10 +68,8 @@ require('./Apply.css');
     //       console.log(res)
     //     });
       // }
-
     render() {
       return (
-
         
         <div>
         <Nav
@@ -108,7 +93,6 @@ require('./Apply.css');
               onChange={this.handleInputChange} />
           </label>
           <br />
-
           
           <label className="applicationInputs">
             Household Income:
@@ -121,7 +105,6 @@ require('./Apply.css');
               onChange={this.handleInputChange} />
           </label>
           <br/>
-
           <label className="applicationInputs">
           About your Family:
           <br/>
@@ -132,7 +115,6 @@ require('./Apply.css');
           onChange={this.handleInputChange} />
         </label>
         <br/>
-
         <label className="applicationInputs">
           Upload Family Photo:
           <br/>
@@ -144,8 +126,6 @@ require('./Apply.css');
           value={this.state.selectedFile}
           onChange={this.handleInputChange} />
         </label>
-
-
           {/* new */}
         {/* <input 
         name= "selectedFile"
@@ -156,13 +136,10 @@ require('./Apply.css');
         ref={fileInput => this.fileInput = fileInput}/>
         <button id="uploadPhoto" onClick={() => this.fileInput.click()}>Pick File</button>
         <button onClick={this.fileUploadHandler}>Upload</button>  */}
-
         <br/>
-
           <button id="submitButton" type="submit" onClick= {this.createApply}>Submit</button>
           
           <br/>
-
           </div>
         </form>
         <Footer />
@@ -171,4 +148,3 @@ require('./Apply.css');
     }
     
   }
-  
