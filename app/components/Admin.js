@@ -40,13 +40,11 @@ export default class Admin extends Component {
   }
 
   handleClick(id) {
-    console.log('the id for the family ', id);
     axios.post('/apis/admin/update/' + id)
       .then(res => console.log(res.data))
       .catch(err => console.error(err));
-    // })
-    console.log('hello');
   }
+
 
   deleteFamily(id) {
     axios.delete('/apis/admin/' + id)
