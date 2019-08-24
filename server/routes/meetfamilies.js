@@ -6,7 +6,7 @@ const meetfamilies_api = require('../apis/meetfamilies_api');
 
 //router.get('/', authCheck, apply_api.index);
 
-router.get('/', meetfamilies_api.findAllFamilies)
+router.get('/', meetfamilies_api.findFamily)
 // console.log("poop");
 // debugger;
 

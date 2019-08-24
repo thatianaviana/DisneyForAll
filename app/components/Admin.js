@@ -39,17 +39,23 @@ export default class Admin extends Component {
   }
 
   handleClick(id) {
-    this.setState(prevState => {
-      const postedFamily = prevState.families.map(family => {
-        if (family._id === id) {
-          family.posted = !family.posted
-        }
-        return console.log(family)
-      })
-      return console.log({
-        families: postedFamily
-      })
-    })
+    console.log('the id for the family ', id);
+    // this.setState(prevState => {
+    //   const postedFamily = prevState.families.map(family => {
+    //     if (family._id === id) {
+    //       family.posted = !family.posted
+    //     }
+    //     return console.log(family)
+    //   })
+    //   console.log({
+    //     families: postedFamily
+    //   })
+    //   console.log('the posted family? ', postedFamily);
+    axios.post('/apis/admin/update/' + id)
+      .then(res => console.log(res.data))
+      .catch(err => console.error(err));
+    // })
+    console.log('hello');
   }
 
 

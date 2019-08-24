@@ -1,13 +1,13 @@
 const Apply = require('../models/Apply');
 
-exports.findAllFamilies = function (req, res) {
+exports.findFamily = function (req, res) {
     console.log(`----------------------- nuts ---------------------`)
 
-    Apply.find({}, function (err, dbApply) {
+    Apply.find({ posted: true }, function (err, dbApply) {
 
         // check to see if theres already a user with that email
 
-        console.log("Find All", dbApply);
+        console.log("Find family who's posted is true", dbApply);
         // const newApply = new Apply();
         res.json(dbApply)
 
