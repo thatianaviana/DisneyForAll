@@ -7,7 +7,6 @@ import Auth from './utils/Auth';
 import Families from "./FamilyTable";
 
 
-
 require('./Admin.css');
 
 
@@ -19,29 +18,50 @@ export default class Admin extends Component {
     this.state = {
       families: []
     }
+    this.handleClick = this.handleClick.bind(this)
+    this.deleteFamily = this.deleteFamily.bind(this)
   }
 
   componentDidMount() {
     axios.get("/apis/admin")
       .then(data => {
-        console.log('Data that is sent =', data.data);
 
+        console.log(data.data)
         this.setState({
           families: data.data
 
         })
-          .catch(function (err) {
-            console.log(err);
-          })
+
+      }).catch(function (err) {
+        console.log(err);
 
       })
 
   }
 
+  handleClick(id) {
+    axios.post('/apis/admin/update/' + id)
+      .then(res => console.log(res.data))
+      .catch(err => console.error(err));
+  }
+
+
+  deleteFamily(id) {
+    axios.delete('/apis/admin/' + id)
+      .then(response => { console.log(response.data) });
+    this.setState({
+      families: this.state.families.filter(family => family._id !== id)
+    })
+  }
+
+
+
   render() {
 
     return (
       <div>
+
+
         <Nav
           authenticated={this.props.authenticated}
           authenticate={this.props.authenticate}
@@ -73,10 +93,20 @@ export default class Admin extends Component {
                 {/* <td>{this.familiesList()}</td> */}
               </tr>
               {this.state.families.map(family =>
-                         
-                            <Families id={family._id} key={family._id} fullName={family.fullName} houseHoldIncome={family.houseHoldIncome} aboutFamily={family.aboutFamily} selectedFile={family.selectedFile}/>
-                        
-                        )}
+
+                <Families
+                  selectedFile={family.selectedFile}
+                  deleteFamily={this.deleteFamily}
+                  handleClick={this.handleClick}
+                  id={family._id}
+                  key={family._id}
+                  fullName={family.fullName}
+                  houseHoldIncome={family.houseHoldIncome}
+                  aboutFamily={family.aboutFamily}
+
+                />
+
+              )}
             </tbody>
           </table>
         </section>
