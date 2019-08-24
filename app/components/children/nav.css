@@ -6,7 +6,11 @@
 .brand-logo {
   width: 20px;
   height: auto;
+ 
 }
+/* .navbar-brand {
+  color: white;
+} */
 
 #navbarNav{
   justify-content: flex-end!important

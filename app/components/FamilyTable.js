@@ -8,6 +8,9 @@ const Families = props => (
     <td>{props.fullName}</td>
     <td>{props.houseHoldIncome}</td>
     <td>{props.aboutFamily}</td>
+    <td>{props.selectedFile}</td>
+    <td>In Progress</td>
+    <td>Approved</td>
     <td>
       <button id="postbutton" type="button" className="btn btn-outline-info" data-toggle="modal" data-target="#exampleModalLong" onClick={() => props.handleClick(props.id)} >
         Post

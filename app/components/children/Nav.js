@@ -8,7 +8,7 @@ export default class Nav extends Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
             {/* <img className="icon-middle-nav-mobile" src={require("./assets/img/logo.jpg")} /> */}
-            {/* <img src="./assets/img/logo.png" alt="logo" className="brand-logo" /> */}
+            <img src="./assets/img/logo.png" alt="logo" className="brand-logo" />
             <NavLink to="/" className="navbar-brand"> Disney For All</NavLink>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>

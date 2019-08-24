@@ -1,11 +1,19 @@
-#plans {
+#familyTable {
   /* margin-left: 10%; */
-  height: 500px;
-  margin-top: 10%;
-  padding-bottom: 30%;
-  padding-left: 5%;
-  padding-right: 5%;
+  height: 100%;
+  /* margin-top: 10%; */
+  /* padding-bottom: 30%; */
   
+  
+}
+#familyTable {
+ 
+  /* background-image: url(../../public/assets/img/about5.jpg); */
+  /* border: 3px solid black; */
+  background-size: cover;
+  background-attachment: fixed;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
  td, th {

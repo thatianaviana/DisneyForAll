@@ -78,8 +78,12 @@ export default class Admin extends Component {
                 <th scope="col">Name</th>
                 <th scope="col">Income</th>
                 <th scope="col">About Family</th>
+                <th scope="col">Family Photo</th>
                 <th scope="col">Post</th>
+                <th scope="col">In Progress</th>
+                <th scope="col">Approved</th>
                 <th scope="col">Delete</th>
+
                 {/* <th scope="col">Family Picture</th> */}
               </tr>
             </thead>
@@ -91,6 +95,7 @@ export default class Admin extends Component {
               {this.state.families.map(family =>
 
                 <Families
+                  selectedFile={family.selectedFile}
                   deleteFamily={this.deleteFamily}
                   handleClick={this.handleClick}
                   id={family._id}
