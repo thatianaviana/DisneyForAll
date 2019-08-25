@@ -19,18 +19,20 @@ We'll provide the family with entrance tickets, parking fee, food and hopefully 
 * JavaScript
 
 #### Dependencies Used
- * babel-core
- * babel-loader
- * babel-plugin-transform-class-properties
- * babel-preset-es2015
- * babel-preset-react
- * bootstrap
- * browser-sync
- * font-awesome
- * jquery
- * sinon-mongoose
- * webpack
-
+*   axios": "^0.19.0",
+*   bcrypt-nodejs
+*   body-parser
+*   express
+*   express-session
+*   mongoose
+*   morgan
+*   nodemon
+*   passport
+*   passport-local
+*   react
+*   react-bootstrap
+*   react-dom
+*   react-router-dom
 
 #### Heroku Link
 https://sleepy-brushlands-40796.herokuapp.com/
